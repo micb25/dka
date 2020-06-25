@@ -23,7 +23,7 @@ unset ylabel
 unset key
 
 # date
-date_cmd = sprintf("%s", "`awk -F, '{print "@"$1}' ../daily_data/diagnosis_keys_statistics.csv | tail -n 1 | xargs date +"%d.%m., %H:%M" -d`")
+date_cmd = sprintf("%s", "`awk -F, '{print "@"($1+86400)}' ../daily_data/diagnosis_keys_statistics.csv | tail -n 1 | xargs date +"%d.%m., %H:%M" -d`")
 update_str = "{/*0.75 letztes Update: " . date_cmd . " Uhr}"
 
 set label 1 at graph 0.98, 0.10 update_str right textcolor ls 0
