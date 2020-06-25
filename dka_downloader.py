@@ -11,7 +11,7 @@ def getDailyDownloadList(data_dir):
         headers = { 'Pragma': 'no-cache', 'Cache-Control': 'no-cache' }        
         r = requests.get(DAILY_DOWNLOAD_URL, headers=headers, allow_redirects=True, timeout=5.0)
         
-        f = open(DAILY_DATAFILE, 'a')
+        f = open(DAILY_DATAFILE, 'w')
         f.write(r.text)
         f.close()
         
