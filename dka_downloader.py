@@ -107,9 +107,13 @@ date_list.append([1592784000, 0, 0, 0])
 sorted_data_list = sorted(date_list, key=lambda t: t[0])
      
 # generate csv
-str_csv = "#timestamp, num_keys, num_users_submitted_keys, num_submitted_keys\n"
+sum_keys = sum_users_submitted_keys = sum_submitted_keys = 0
+str_csv = "#timestamp, num_keys, num_users_submitted_keys, num_submitted_keys, sum_keys, sum_users_submitted_keys, sum_submitted_keys\n"
 for line in sorted_data_list:
-    str_csv += "{},{},{},{}\n".format(line[0], line[1], line[2], line[3])
+    sum_keys += line[1]
+    sum_users_submitted_keys += line[2]
+    sum_submitted_keys += line[3]
+    str_csv += "{},{},{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], sum_keys, sum_users_submitted_keys, sum_submitted_keys)
     
 # write csv to disk
 f = open(CSV_FILE, 'w')
