@@ -1,4 +1,4 @@
-set terminal pngcairo enhanced background rgb "#f8f8f8" truecolor font "Linux Libertine O,16" size 800, 600 dl 2.0 
+set terminal pngcairo enhanced background rgb "#ffffff" truecolor font "Linux Libertine O,16" size 800, 600 dl 2.0 
 set encoding utf8
 set minussign
 
@@ -49,7 +49,7 @@ set mytics 2
 set key opaque
 set border back
 
-set object 1 rectangle from screen -0.1,-0.1 to screen 1.1,1.1 fc rgb "#f2f2f2" behind
+set object 1 rectangle from screen -0.1,-0.1 to screen 1.1,1.1 fc rgb "#ffffff" behind
 
 # filter negative values
 filter_neg(x)=(x>=0)?(x):(1/0)
