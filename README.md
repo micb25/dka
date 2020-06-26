@@ -6,24 +6,40 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 
 **Link zur Seite mit Diagrammen: [https://micb25.github.io/dka/](https://micb25.github.io/dka/)**
 
-
-## Positiv getestete Personen, die Diagnoseschlüssel teilten (geschätzt)
+## Diagramme 
+### Positiv getestete Personen, die Diagnoseschlüssel teilten (geschätzt)
 Summe                             |  Täglich
 :--------------------------------:|:----------------------------------:
 ![](plot_sum_users.png)           |  ![](plot_num_users.png)
 
-## Geteilte Diagnoseschlüssel von positiv getesteten Personen (geschätzt)
+### Geteilte Diagnoseschlüssel von positiv getesteten Personen (geschätzt)
 Summe                             |  Täglich
 :--------------------------------:|:----------------------------------:
  ![](plot_sum_keys_submitted.png) |  ![](plot_num_keys_submitted.png)
 
-## Diagnoseschlüssel
+### Diagnoseschlüssel
 Summe                             |  Täglich
 :--------------------------------:|:----------------------------------:
  ![](plot_keys_sum.png)           |  ![](plot_keys.png)
  
-## Verteilung Transmission Risk Level in Diagnoseschlüsseln
+### Verteilung Transmission Risk Level in Diagnoseschlüsseln
 ![](plot_TRL_histogram.png)
 
-## Verbreitung der Corona-Warn-App
+### Verbreitung der Corona-Warn-App
 ![](plot_cwa_downloads.png)
+
+## Erläuterungen
+
+### Transmission Risk Level
+Entscheidet sich eine Person im Falle einer positiven Testung zur Übertragung seiner Tagesschlüssel (max. 14 Stück), so wird diesen ein variierender Wert für das Übertragungsrisiko hinzugefügt (Wertebereich: 1-8; engl. Transmission Risk Level), welches dem folgendem Schema folgt und vom Robert Koch-Institut festgelegt wurde. Je höher der Wert, desto höher wird ein entsprechendes Infektionsrisiko bei einem Kontakt angenommen.
+
+Tage seit Krankmeldung   | Übermitteltes TRL
+:-----------------------:|:------------------:
+0                        | 5
+1                        | 6
+2                        | 8
+3                        | 8
+4                        | 8
+5                        | 5
+6                        | 3
+7-13                     | 1
