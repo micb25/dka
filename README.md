@@ -24,5 +24,8 @@ Summe                             |  Täglich
 :--------------------------------:|:----------------------------------:
  ![](plot_keys_sum.png)           |  ![](plot_keys.png)
  
+## Verteilung Transmission Risk Level in Diagnoseschlüsseln
+![](plot_TRL_histogram.png)
+
 ## Verbreitung der Corona-Warn-App
 ![](plot_cwa_downloads.png)
