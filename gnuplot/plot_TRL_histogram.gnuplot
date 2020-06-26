@@ -3,7 +3,7 @@ load "../gnuplot/template.gnuplot"
 set output '../plot_TRL_histogram.png'
 
 # get last update
-date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+86400}' ../daily_data/transmission_risk_level_statistics.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")
+date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+3600}' ../daily_data/transmission_risk_level_statistics.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")
 update_str = "{/*0.75 (Stand: " . date_cmd . "; Quelle: Corona-Warn-App)}"
 
 # y-axis setup
