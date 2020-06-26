@@ -40,8 +40,9 @@ def getDailyList(data_dir, datestr):
         return False
     
 if __name__ == "__main__":
-    DATA_DIR = os.path.dirname(os.path.realpath(__file__)) + "/daily_data/"
-    CSV_FILE = DATA_DIR + "diagnosis_keys_statistics.csv"
+    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/daily_data/"
+    CSV_FILE  = DATA_DIR + "diagnosis_keys_statistics.csv"
+    JSON_FILE = DATA_DIR + "diagnosis_keys_statistics.json"
     
     # download daily data list    
     daily_list = getDailyDownloadList(DATA_DIR)
@@ -100,10 +101,10 @@ if __name__ == "__main__":
                             if ( len(line) == 2 ):
                                 num_subbmited_keys += int(line[0])*int(line[1])
                         
-                    date_list.append([timestamp, num_keys, num_users, num_subbmited_keys])
+                    date_list.append([timestamp, num_keys, num_users, num_subbmited_keys, 0, 0, 0])
     
     # add an empty entry as origin (2020-06-22)
-    date_list.append([1592784000, 0, 0, 0])
+    date_list.append([1592784000, 0, 0, 0, 0, 0, 0])
     
     # sort list by timestamp
     sorted_data_list = sorted(date_list, key=lambda t: t[0])
@@ -115,9 +116,17 @@ if __name__ == "__main__":
         sum_keys += line[1]
         sum_users_submitted_keys += line[2]
         sum_submitted_keys += line[3]
-        str_csv += "{},{},{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], sum_keys, sum_users_submitted_keys, sum_submitted_keys)
+        line[4] = sum_keys
+        line[5] = sum_users_submitted_keys
+        line[6] = sum_submitted_keys
+        str_csv += "{},{},{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
         
     # write csv to disk
-    f = open(CSV_FILE, 'w')
-    f.write(str_csv)
-    f.close()
+    with open(CSV_FILE, 'w') as f:
+        f.write(str_csv)
+        f.close()
+    
+    # write json to disk
+    with open(JSON_FILE, 'w') as f:
+        f.write(json.dumps(sorted_data_list, sort_keys=True))
+        f.close()
