@@ -38,6 +38,21 @@ def getDailyList(data_dir, datestr):
         return False        
     except:
         return False
+   
+    
+def anonymize_TEKs(filename):
+
+    tek_pattern = re.compile(r"[0-9a-f]{24},")
+    
+    with open(filename, 'r') as f:
+        raw_data = f.read().splitlines()
+        f.close()
+        
+    with open(filename, 'w') as f:
+        for line in raw_data:
+            f.write(tek_pattern.sub("XXXXXXXXXXXXXXXXXXXXXXXX,", line) + "\n")
+        f.close()       
+
     
 if __name__ == "__main__":
     DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/daily_data/"
@@ -60,6 +75,7 @@ if __name__ == "__main__":
         filename_analysis = DATA_DIR + daily_report + ".dat"
         if not os.path.isfile(filename_analysis):
             os.system("./diagnosis-keys/parse_keys.py -u -l -d {} > {}".format(filename, filename_analysis))
+            anonymize_TEKs(filename_analysis)
             
     # generate list of analyzed files
     pattern_date = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2}).dat") 
