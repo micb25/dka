@@ -34,6 +34,6 @@ set label 4 at graph 0.50, 0.90 "{/*0.75 (zur Erhöhung der Anonymität/Sicherhe
 
 # data
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $5}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 1 notitle, \
+  "<awk -F, '{if ( NR > 1 ) print $1, $5}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 4 notitle, \
   \
-  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$5}}END{print a, b, b-c}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 17 ps 0.0 center offset char  0.0, 0.75 tc ls 1 notitle
+  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$5}}END{print a, b, b-c}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 1 ps 0.0 center offset char  0.0, 0.75 tc ls 4 notitle
