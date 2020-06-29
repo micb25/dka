@@ -76,7 +76,7 @@ if __name__ == "__main__":
     ###########################################################################
     ##### Paths and filenames
     ###########################################################################
-    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/daily_data/"
+    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../daily_data/"
     
     DKS_CSV_FILE  = DATA_DIR + "diagnosis_keys_statistics.csv"
     DKS_JSON_FILE = DATA_DIR + "diagnosis_keys_statistics.json"
@@ -100,7 +100,7 @@ if __name__ == "__main__":
         
         filename_analysis = DATA_DIR + daily_report + ".dat"
         if not os.path.isfile(filename_analysis):
-            os.system("./diagnosis-keys/parse_keys.py -u -l -d {} > {}".format(filename, filename_analysis))
+            os.system("../diagnosis-keys/parse_keys.py -u -l -d {} > {}".format(filename, filename_analysis))
             anonymize_TEKs(filename_analysis)
             
     # generate list of analyzed files
