@@ -6,6 +6,8 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 
 **Link zur Seite mit Diagrammen: [https://micb25.github.io/dka/](https://micb25.github.io/dka/)**
 
+Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
+
 ## Diagramme 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten (geschätzt)
 Täglich                           |  Summe
