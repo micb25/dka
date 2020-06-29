@@ -8,19 +8,19 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 
 ## Diagramme 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten (geschätzt)
-Summe                             |  Täglich
+Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
-![](plot_sum_users.png)           |  ![](plot_num_users.png)
+![](plot_num_users.png)           |  ![](plot_sum_users.png)
 
 ### Geteilte Diagnoseschlüssel von positiv getesteten Personen (geschätzt)
-Summe                             |  Täglich
+Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
- ![](plot_sum_keys_submitted.png) |  ![](plot_num_keys_submitted.png)
+ ![](plot_num_keys_submitted.png) |  ![](plot_sum_keys_submitted.png)
 
 ### Diagnoseschlüssel
-Summe                             |  Täglich
+Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
- ![](plot_keys_sum.png)           |  ![](plot_keys.png)
+ ![](plot_keys.png)               |  ![](plot_keys_sum.png)
  
 ### Verteilung Transmission Risk Level in Diagnoseschlüsseln
 ![](plot_TRL_histogram.png)
