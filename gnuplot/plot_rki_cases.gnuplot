@@ -36,6 +36,6 @@ set offsets 0.00, 0.00, graph 0.15, 0.00
 
 # data
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $3}' ../RKI-data/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle, \
+  "<awk -F, '{if ( NR > 1 ) print $1+2*3600, $3}' ../RKI-data/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../RKI-data/cases_germany_rki.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels point ls 2 ps 0.0 center offset char -0.5, 0.80 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../RKI-data/cases_germany_rki.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels point ls 2 ps 0.0 center offset char 0.0, 0.80 tc ls 10 notitle
