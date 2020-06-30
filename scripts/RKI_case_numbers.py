@@ -43,7 +43,7 @@ def getRKIDataForGermany(url):
 
 if __name__ == "__main__":
     
-    DATAFILE = os.path.dirname(os.path.realpath(__file__)) + "/../cwa-data/cases_germany_rki.csv"
+    DATAFILE = os.path.dirname(os.path.realpath(__file__)) + "/../RKI-data/cases_germany_rki.csv"
     URL = 'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html'
           
     with open(DATAFILE, "r") as df:
