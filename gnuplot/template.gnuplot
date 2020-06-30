@@ -30,7 +30,7 @@ set style line  19 lc rgb '#5c5c5c' lt 1 lw 2
 set style line  21 dt 3
 
 # grid
-set grid xtics ls 21 lc rgb '#aaaaaa'
+#set grid xtics ls 21 lc rgb '#aaaaaa'
 set grid ytics ls 21 lc rgb '#aaaaaa'
 
 # misc
