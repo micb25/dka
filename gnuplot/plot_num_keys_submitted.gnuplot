@@ -38,4 +38,4 @@ set offsets 0.00, 0.00, graph 0.20, 0.00
 plot  \
   "<awk -F, '{if ( NR > 1 ) print $1, $4}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 3 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$4; print a, b, b-c}}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}\n{/*0.85 (%+i)}", $2, $3)) with labels point ls 2 ps 0.0 center offset char  0.0, 1.75 tc ls 3 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$4; print a, b, b-c}}' ../daily_data/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}\n{/*0.85 (%+i)}", $2, $3)) with labels point ls 2 ps 0.0 center offset char  0.0, 1.75 tc ls 10 notitle
