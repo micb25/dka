@@ -14,6 +14,11 @@ Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
 ![](plot_num_users.png)           |  ![](plot_sum_users.png)
 
+### Korrelation mit RKI-Daten
+gemeldete Neuinfektionen          | Verhältnis
+:--------------------------------:|:----------------------------------:
+![](plot_rki_cases.png)           |  ![](plot_rki_cwa_cases.png)
+
 ### Geteilte Diagnoseschlüssel von positiv getesteten Personen (geschätzt)
 Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
