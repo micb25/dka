@@ -27,10 +27,10 @@ set style fill solid 1.00
 
 # date
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($1+7200)}' ../RKI-data/cases_germany_rki.csv | tail -n 1 | xargs date +"%d.%m." -d`")
-update_str = "{/*0.75 letztes Update: " . date_cmd . "; Quelle: Robert Koch-Institut}"
+update_str = "{/*0.75 (letztes Update: " . date_cmd . "; Quelle: Robert Koch-Institut)}"
 
 set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold täglich an das RKI gemeldete Neuinfektionen (COVID-19)}" center textcolor ls 0
-set label 2 at graph 0.50, 0.90 "{/*0.75 (" . update_str . "{/*0.75 )}" center textcolor ls 0
+set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 
 set offsets 0.00, 0.00, graph 0.15, 0.00
 
