@@ -5,15 +5,15 @@ on:
     branches:
       - deploy_testing
   schedule:
-    - cron: "15 0 * * *"
+    - cron: "15 2 * * *"
 
 jobs:
   update_page:
     runs-on: ubuntu-latest
 
     steps:
-      - name: install Linux Libertine
-        run: sudo apt-get install fonts-linuxlibertine
+      - name: install gnuplot and font
+        run: sudo apt-get install gnuplot fonts-linuxlibertine
     
       - name: checkout project
         uses: actions/checkout@v2
@@ -43,11 +43,16 @@ jobs:
         working-directory: main
         run: bash update_all.sh
         
-      - name: publish
-        uses: netlify/actions/cli@master
+      - name: git commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add plot*png RKI-data/* daily_data/*
+          git commit -m "daily update" -a
+        
+      - name: push changes
+        uses: ad-m/github-push-action@master
         with:
-          production-branch: deploy_testing
-          args: deploy --dir=main --prod
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "deploy_testing"
+          
