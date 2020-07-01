@@ -23,7 +23,7 @@ def plot_risk_level(masterframe):
 
 
 if __name__ == "__main__":
-    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../daily_data/"
+    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
                 
     # generate list of analyzed files
     pattern_date = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2}).dat") 

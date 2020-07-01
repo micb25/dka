@@ -76,7 +76,7 @@ if __name__ == "__main__":
     ###########################################################################
     ##### Paths and filenames
     ###########################################################################
-    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../daily_data/"
+    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
     
     DKS_CSV_FILE  = DATA_DIR + "diagnosis_keys_statistics.csv"
     DKS_JSON_FILE = DATA_DIR + "diagnosis_keys_statistics.json"

@@ -3,11 +3,11 @@ load "../gnuplot/template.gnuplot"
 set output '../plot_TRL_histogram_relative.png'
 
 # get last update
-date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+3600}' ../daily_data/transmission_risk_level_statistics.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")
+date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+3600}' ../data_CWA/transmission_risk_level_statistics.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")
 update_str = "{/*0.75 (Stand: " . date_cmd . "; Quelle: Corona-Warn-App)}"
 
 # sum of keys
-stats "<awk -F, '{if ($1==0) {print $2+$3+$4+$5+$6+$7+$8+$9}}' ../daily_data/transmission_risk_level_statistics.csv" using 1 name "K" nooutput
+stats "<awk -F, '{if ($1==0) {print $2+$3+$4+$5+$6+$7+$8+$9}}' ../data_CWA/transmission_risk_level_statistics.csv" using 1 name "K" nooutput
 Sum_Keys = K_max / 100.0
 
 # y-axis setup
@@ -41,7 +41,7 @@ set offsets 0.00, 0.00, graph 0.25, 0.00
 
 # data
 plot  \
-  for [i=1:9] "<awk -F, '{if ($1==0) {print $0}}' ../daily_data/transmission_risk_level_statistics.csv" using (i-1):(column(i)/Sum_Keys) with boxes lt rgb "#72777e" notitle, \
+  for [i=1:9] "<awk -F, '{if ($1==0) {print $0}}' ../data_CWA/transmission_risk_level_statistics.csv" using (i-1):(column(i)/Sum_Keys) with boxes lt rgb "#72777e" notitle, \
   \
-  for [i=1:9] "<awk -F, '{if ($1==0) {print $0}}' ../daily_data/transmission_risk_level_statistics.csv" using (i-1):(column(i)/Sum_Keys):(column(i)>0?sprintf("{/*0.85 %.1f%%}", column(i)/Sum_Keys):"") with labels offset 0, graph 0.05 lt rgb "#72777e"
+  for [i=1:9] "<awk -F, '{if ($1==0) {print $0}}' ../data_CWA/transmission_risk_level_statistics.csv" using (i-1):(column(i)/Sum_Keys):(column(i)>0?sprintf("{/*0.85 %.1f%%}", column(i)/Sum_Keys):"") with labels offset 0, graph 0.05 lt rgb "#72777e"
   

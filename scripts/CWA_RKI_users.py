@@ -7,7 +7,7 @@ if __name__ == "__main__":
     ###########################################################################
     ##### Paths and filenames
     ###########################################################################
-    CWA_DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../daily_data/"
+    CWA_DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
     RKI_DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_RKI/"
     DKS_JSON_FILE = CWA_DATA_DIR + "diagnosis_keys_statistics.json"
     RKI_CSV_FILE  = RKI_DATA_DIR + "cases_germany_rki.csv"

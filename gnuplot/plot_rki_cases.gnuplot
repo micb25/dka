@@ -3,7 +3,7 @@ load "template.gnuplot"
 set output '../plot_rki_cases.png'
 
 # stats for x
-stats "<awk -F, '{if ( NR > 1 ) print $1}' ../daily_data/diagnosis_keys_statistics.csv" using 1 nooutput
+stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
 set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 3.0 * 86400 ]
 
 # stats for y
