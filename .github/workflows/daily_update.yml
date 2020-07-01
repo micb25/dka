@@ -45,8 +45,6 @@ jobs:
         
       - name: git commit
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add plot*png RKI-data/* daily_data/*
           git commit -m "daily update" -a
         
