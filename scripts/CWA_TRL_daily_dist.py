@@ -16,7 +16,7 @@ def plot_risk_level(masterframe):
     masterframe.columns = masterframe.columns.str.replace("Transmission Risk Level", "TRL")
     ax = masterframe.plot.bar(stacked=True, cmap='viridis')
     ax.set_title("tägliche Verteilung der TRL", position=(0.58, 0.9),fontweight="bold")
-    plt.grid(linestyle="dashed", color="grey", axis='y')
+    plt.grid(linestyle="dotted", color="grey", axis='y')
     plt.xlabel("")
     plt.savefig("../plot_TRL_daily_dist.png", bbox_inches = "tight", dpi=115.2)
 
