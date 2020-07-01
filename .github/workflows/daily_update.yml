@@ -53,7 +53,7 @@ jobs:
         run: |
           git config --local user.email "boehme.mic@gmail.com"
           git config --local user.name "micb25"
-          git add plot*png RKI-data/*.csv daily_data/*.json daily_data/*.csv daily_data/*.dat
+          git add plot*png data_RKI/*.csv daily_data/*.json daily_data/*.csv daily_data/*.dat
           git commit -m "daily update (automatic)" -a
         
       - name: push changes
