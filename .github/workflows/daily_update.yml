@@ -3,7 +3,7 @@ name: daily update
 on:
   push:
     branches:
-      - master
+      - deploy_testing
   schedule:
     - cron: "15 0 * * *"
 
@@ -43,3 +43,11 @@ jobs:
         working-directory: main
         run: bash update_all.sh
         
+      - name: publish
+        uses: netlify/actions/cli@master
+        with:
+          production-branch: deploy_testing
+          args: deploy --dir=main --prod
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
