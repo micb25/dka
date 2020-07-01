@@ -27,7 +27,7 @@ set xtics ( "1" 1, "2" 2, "3" 3, "4" 4, "5" 5, "6" 6, "7" 7, "8" 8 )
 
 set xrange [ 9 : 0 ] reverse
 
-set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Verteilung der Transmission Risk Level in Diagnoseschlüsseln}" center textcolor ls 0
+set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Verteilung der TRL in Diagnoseschlüsseln}" center textcolor ls 0
 set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 
 set datafile separator ","

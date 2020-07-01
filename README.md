@@ -29,7 +29,7 @@ Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
  ![](plot_keys.png)               |  ![](plot_keys_sum.png)
  
-### Verteilung Transmission Risk Level in Diagnoseschlüsseln
+### Verteilung Transmission Risk Level (TRL) in Diagnoseschlüsseln
 Absolut                           |  Relativ
 :--------------------------------:|:----------------------------------:
 ![](plot_TRL_histogram.png)       | ![](plot_TRL_histogram_relative.png)
