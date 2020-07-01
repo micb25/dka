@@ -39,7 +39,10 @@ zeitlicher Verlauf                | .
 ![](plot_TRL_daily_dist.png)      | ![](plot_empty.png) 
 
 ### Verbreitung der Corona-Warn-App
-![](plot_cwa_downloads.png)
+zeitlicher Verlauf                | .  
+:--------------------------------:|:----------------------------------:
+![](plot_cwa_downloads.png)       | ![](plot_empty.png) 
+
 
 ## Erläuterungen
 
