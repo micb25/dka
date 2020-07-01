@@ -44,6 +44,7 @@ jobs:
         run: bash update_all.sh
         
       - name: git commit
+        working-directory: main
         run: |
           git add plot*png RKI-data/* daily_data/*
           git commit -m "daily update" -a
