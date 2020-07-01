@@ -1,0 +1,45 @@
+name: daily update
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "15 0 * * *"
+
+jobs:
+  update_page:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: install Linux Libertine
+        run: sudo apt-get install fonts-linuxlibertine
+    
+      - name: checkout project
+        uses: actions/checkout@v2
+        with:
+          path: main
+
+      - name: checkout parser tool
+        uses: actions/checkout@v2
+        with:
+          repository: mh-/diagnosis-keys
+          path: diagnosis-keys
+
+      - name: set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+
+      - name: install requirements
+        working-directory: main
+        run: pip install -r requirements.txt
+
+      - name: install tool requirements
+        working-directory: diagnosis-keys
+        run: pip install -r requirements.txt
+
+      - name: run main job
+        working-directory: main
+        run: bash update_all.sh
+        
