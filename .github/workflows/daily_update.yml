@@ -3,7 +3,7 @@ name: daily update
 on:
   push:
     branches:
-      - deploy_testing
+      - master
   schedule:
     - cron: "15 0 * * *"
 
@@ -54,11 +54,10 @@ jobs:
           git config --local user.email "boehme.mic@gmail.com"
           git config --local user.name "micb25"
           git add plot*png RKI-data/*.csv daily_data/*.json daily_data/*.csv daily_data/*.dat
-          git commit -m "daily update" -a
+          git commit -m "daily update (automatic)" -a
         
       - name: push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: "deploy_testing"
           
