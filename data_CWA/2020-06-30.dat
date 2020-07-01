@@ -1,7 +1,7 @@
 Exposure Notification Diagnosis Key Parser
 This script parses published Diagnosis Keys.
 
-File '/home/michael/coding/dka/scripts/../daily_data/2020-06-30.zip' read.
+File '/home/michael/coding/dka/scripts/../data_CWA/2020-06-30.zip' read.
 - Time window: 2020-06-30 08:00:00 CEST - 2020-06-30 22:00:00 CEST
 - Region: DE
 - Batch: 1 of 1
@@ -2693,7 +2693,8 @@ Diagnosis Keys:
 2679: TEK: ffbba5edXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2020-06-23 02:00:00 CEST - 2020-06-24 02:00:00 CEST (2654784, 144)
 2680: TEK: ffdaed8cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2020-06-28 02:00:00 CEST - 2020-06-29 02:00:00 CEST (2655504, 144)
 Parsing the Diagnosis Key list, counting unique users...
-Length: 2680 keys (268 without padding)
+Length: 2680 keys
+Padding Multiplier detected: 10
 24 user(s) found.
 They submitted these numbers of keys:
 2 user(s): 1 Diagnosis Key(s)
@@ -2704,3 +2705,4 @@ They submitted these numbers of keys:
 4 user(s): 12 Diagnosis Key(s)
 12 user(s): 13 Diagnosis Key(s)
 160 keys not parsed (16 without padding).
+24 / 2*1, 2*4, 1*7, 1*9, 2*11, 4*12, 12*13

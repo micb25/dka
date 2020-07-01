@@ -100,7 +100,7 @@ if __name__ == "__main__":
         
         filename_analysis = DATA_DIR + daily_report + ".dat"
         if not os.path.isfile(filename_analysis):
-            os.system("../diagnosis-keys/parse_keys.py -u -l -d {} > {}".format(filename, filename_analysis))
+            os.system("../diagnosis-keys/parse_keys.py --auto-multiplier -u -l -d {} > {}".format(filename, filename_analysis))
             anonymize_TEKs(filename_analysis)
             
     # generate list of analyzed files
