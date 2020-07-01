@@ -34,6 +34,10 @@ Absolut                           |  Relativ
 :--------------------------------:|:----------------------------------:
 ![](plot_TRL_histogram.png)       | ![](plot_TRL_histogram_relative.png)
 
+zeitlicher Verlauf                | .  
+:--------------------------------:|:----------------------------------:
+![](plot_TRL_daily_dist.png)      | ![](plot_empty.png) 
+
 ### Verbreitung der Corona-Warn-App
 ![](plot_cwa_downloads.png)
 
