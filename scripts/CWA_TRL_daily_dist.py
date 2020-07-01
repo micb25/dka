@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib import rcParams
 
 rcParams['font.family'] = 'Linux Libertine O'
-rcParams['font.size'] = 16
+rcParams['font.size'] = 14
 rcParams['figure.figsize'] = 8, 6
 pandas.options.display.max_columns = 500 
 pandas.options.display.max_rows = 500    
@@ -18,7 +18,8 @@ def plot_risk_level(masterframe):
     ax.set_title("tägliche Verteilung der TRL", position=(0.58, 0.9),fontweight="bold")
     plt.grid(linestyle="dotted", color="grey", axis='y')
     plt.xlabel("")
-    plt.savefig("../plot_TRL_daily_dist.png", bbox_inches = "tight", dpi=115.2)
+    plt.subplots_adjust(wspace=1, hspace=0.5,left=0.1675,top=0.9675,right=0.982,bottom=0.1625)
+    plt.savefig("../plot_TRL_daily_dist.png", dpi=100)
 
 
 if __name__ == "__main__":
@@ -43,7 +44,7 @@ if __name__ == "__main__":
 
                     # create pandas dataframes 
                     dataframe = pandas.read_csv(DATA_DIR + file, skiprows=14, skipfooter=16, engine='python',names=['A','Risiko','C','D'] )
-                    dataframe['time'] = datetime.date.fromtimestamp(timestamp).strftime("%d.%m.")
+                    dataframe['time'] = datetime.date.fromtimestamp(timestamp).strftime("%d.%m. ")
                     masterframe = masterframe.append(dataframe)
 
     # write risk level plot to disk
