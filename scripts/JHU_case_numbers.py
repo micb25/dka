@@ -42,8 +42,8 @@ if __name__ == "__main__":
     DATAFILE = os.path.dirname(os.path.realpath(__file__)) + "/../data_JHU/cases_germany_jhu.csv"
     URL_BASE = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
     
-    today_str = datetime.datetime.today().strftime("%m-%d-%Y")
-    today_url = URL_BASE + today_str + ".csv"
+    yesterday_str = (datetime.datetime.today() - datetime.timedelta(days=1)).strftime("%m-%d-%Y")
+    today_url = URL_BASE + yesterday_str + ".csv"
     
     data = getJHUDataForGermany(today_url)
     
