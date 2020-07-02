@@ -28,15 +28,16 @@ if __name__ == "__main__":
     sorted_data = sorted(json_data, key=lambda t: t[0])
     
     # read JHU case numbers from disk
-    rki_case_numbers = []
+    jhu_case_numbers = []
     try:
         with open(JHU_CSV_FILE, 'r') as f:
-            rki_raw_data = f.read().splitlines()[1:]
+            jhu_raw_data = f.read().splitlines()[1:]
             f.close()
             
-        for entry in rki_raw_data:
+        for entry in jhu_raw_data:
             fields = entry.split(",")
-            rki_case_numbers.append( [ int(fields[0]), int(fields[2]) ] )
+            jhu_case_numbers.append( [ int(fields[0]), int(fields[2]) ] )
+            
     except:
         print("Error! Cannot read or parse JHU CSV data!")
         sys.exit(1)
@@ -49,9 +50,10 @@ if __name__ == "__main__":
         pos_cases_day = False
         
         # find the closest JHU date to the CWA timestamp data
-        for rki_data in rki_case_numbers:
-            if ( abs(rki_data[0] - timestamp) < 86400 ):
-                pos_cases_day = rki_data[1]
+        for jhu_data in jhu_case_numbers:
+            time_delta = jhu_data[0] - timestamp
+            if ( time_delta > 0 ) and ( time_delta < 86400 ):
+                pos_cases_day = jhu_data[1]
                 break        
         
         if pos_cases_day is not False:
