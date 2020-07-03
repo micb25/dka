@@ -8,6 +8,7 @@ cd scripts
 ./CWA_RKI_users.py > /dev/null
 ./CWA_JHU_users.py > /dev/null
 ./CWA_TRL_daily_dist.py > /dev/null
+./CWA_TRL_multiplier.py > /dev/null
 ./CWA_app_config.py > /dev/null
 cd ..
 
