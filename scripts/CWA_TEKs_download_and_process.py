@@ -154,6 +154,20 @@ if __name__ == "__main__":
     # add an empty entry as origin (2020-06-22)
     date_list.append([1592784000, 0, 0, 0, 0, 0, 0])
     
+    ###########################################################
+    # manual data fix for 2020-07-02, 
+    # due to multiplier change (10 -> 5) during the day
+    #
+    # analysis of hourly packages:
+    # users: 35 instead of 37 (2 with an invalid transmission risk profile)
+    # submitted keys: 312 instead of 376
+    #
+    for entry in date_list:
+        if ( entry[0] == 1593648000 ): # 2020-07-20            
+            entry[2] = 35  # 35 users instead of 37
+            entry[3] = 312 # 376 submitted keys instead of 312
+    ###########################################################
+    
     # sort list by timestamp
     sorted_data_list = sorted(date_list, key=lambda t: t[0])
          
