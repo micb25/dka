@@ -8,13 +8,14 @@ if __name__ == "__main__":
     ###########################################################################
     ##### Paths and filenames
     ###########################################################################
-    CWA_DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
+    CWA_DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA_hourly/"
+    MAIN_DATA_DIR = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
     
-    MULT_JSON_FILE = CWA_DATA_DIR + "cwa_padding_multiplier.json"
-    MULT_CSV_FILE  = CWA_DATA_DIR + "cwa_padding_multiplier.csv"
+    MULT_JSON_FILE = MAIN_DATA_DIR + "cwa_padding_multiplier.json"
+    MULT_CSV_FILE  = MAIN_DATA_DIR + "cwa_padding_multiplier.csv"
                 
     # generate list of analyzed files
-    pattern_date = re.compile(r"([0-9]{4})-([0-9]{2})-([0-9]{2}).dat") 
+    pattern_date = re.compile(r"hourly_packages_([0-9]{4})-([0-9]{2})-([0-9]{2}).json") 
     pattern_multiplier = re.compile(r"Padding Multiplier detected: ([0-9]{1,})")
     
     # results
@@ -23,22 +24,39 @@ if __name__ == "__main__":
     # read processed key files
     for r, d, f in os.walk(CWA_DATA_DIR):
         for file in f:
-            if file.endswith(".dat"):
+            if file.endswith(".json"):
                 pd = pattern_date.findall(file)                
                 if ( len(pd) == 1 ) and ( len(pd[0]) == 3):
                     
-                    # read contents
+                    # read JSON contents
                     with open(CWA_DATA_DIR + file, 'r') as df:
                         raw_data = df.read()
                     
-                    # find regular expression
-                    pm = pattern_multiplier.findall(raw_data)
-                    if ( len(pm) != 1 ):
+                    hours = json.loads(raw_data)
+                    if ( len(hours) < 1 ):
                         continue
                     
-                    # add multiplier
-                    timestamp = int(datetime.datetime(year=int(pd[0][0]), month=int(pd[0][1]), day=int(pd[0][2]), hour=2).strftime("%s"))
-                    data_array.append( [ timestamp, int(pm[0])] )
+                    date_str = pd[0][0] + "-" + pd[0][1] + "-" + pd[0][2]
+                    filepath = CWA_DATA_DIR + date_str + "/"
+                    if not os.path.isdir(filepath):
+                        continue
+                    
+                    for hour in hours:
+                        filename = filepath + date_str + "_" + str(hour) + ".dat"
+                        if not os.path.isfile(filename):
+                            continue
+                        
+                        with open(filename, 'r') as df:
+                            package_data = df.read()
+
+                        # find regular expression
+                        pm = pattern_multiplier.findall(package_data)
+                        if ( len(pm) != 1 ):
+                            continue
+                        
+                        # add multiplier
+                        timestamp = int(datetime.datetime(year=int(pd[0][0]), month=int(pd[0][1]), day=int(pd[0][2]), hour=hour).strftime("%s"))
+                        data_array.append( [ timestamp, int(pm[0])] )                        
                     
     # sort data by timestamp
     sorted_data = sorted(data_array, key=lambda t: t[0])
