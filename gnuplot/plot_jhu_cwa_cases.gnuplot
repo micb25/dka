@@ -31,8 +31,8 @@ set grid ytics ls 21 lc rgb '#aaaaaa'
 set boxwidth 0.75*86400
 set style fill solid 1.00
 
-set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Verhältnis zwischen positiv getesteten Personen, die}" center textcolor ls 0
-set label 2 at graph 0.50, 0.89 "{/Linux-Libertine-O-Bold Diagnoseschlüssel teilten und den gemeldeten Neuinfektionen}" center textcolor ls 0
+set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Verhältnis zwischen positiv getesteten Personen, die Diagnose-}" center textcolor ls 0
+set label 2 at graph 0.50, 0.89 "{/Linux-Libertine-O-Bold schlüssel veröffentlichten, und den gemeldeten Neuinfektionen}" center textcolor ls 0
 set label 3 at graph 0.50, 0.83 update_str center textcolor ls 0
 
 set offsets 0.00, 0.00, graph 0.50, 0.00
