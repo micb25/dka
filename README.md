@@ -18,11 +18,15 @@ Täglich                           |  Summe
 gemeldete Neuinfektionen          | Verhältnis
 :--------------------------------:|:----------------------------------:
 ![](plot_rki_cases.png)           |  ![](plot_rki_cwa_cases.png)
+                                  |    
+![](plot_rki_cwa_cases_7d.png)    |  ![](plot_empty.png)
 
 ### Korrelation mit Daten der [Johns Hopkins Universität](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
 gemeldete Neuinfektionen          | Verhältnis
 :--------------------------------:|:----------------------------------:
 ![](plot_jhu_cases.png)           |  ![](plot_jhu_cwa_cases.png)
+                                  |    
+![](plot_jhu_cwa_cases_7d.png)    |  ![](plot_empty.png)
 
 ### Geteilte Diagnoseschlüssel von positiv getesteten Personen ([geschätzt](https://github.com/corona-warn-app/cwa-documentation/issues/258#issuecomment-650760771))
 Täglich                           |  Summe
