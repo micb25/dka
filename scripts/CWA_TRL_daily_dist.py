@@ -19,7 +19,7 @@ def plot_risk_level(masterframe):
     plt.grid(linestyle="dotted", color="grey", axis='y')
     plt.xlabel("")
     plt.subplots_adjust(wspace=1, hspace=0.5,left=0.1675,top=0.9675,right=0.982,bottom=0.1625)
-    plt.savefig("../plot_TRL_daily_dist.png", dpi=100)
+    plt.savefig("../plots_de/plot_TRL_daily_dist.png", dpi=100)
 
 
 if __name__ == "__main__":
