@@ -13,6 +13,8 @@ Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr
 Täglich                           |  Summe
 :--------------------------------:|:----------------------------------:
 ![](plot_num_users.png)           |  ![](plot_sum_users.png)
+                                  |    
+![](plot_num_users_7d.png)        |  ![](plot_empty.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
 gemeldete Neuinfektionen          | Verhältnis
