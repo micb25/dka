@@ -22,9 +22,11 @@ def getCWADateList(data_dir):
         return False
     
 
-def getCWAHourlyDataList(data_dir, datestr):
+def getCWAHourlyDataList(data_dir, datestr, datafile):
     DOWNLOAD_URL = "https://svc90.main.px.t-online.de/version/v1/diagnosis-keys/country/DE/date/" + datestr + "/hour"
-    DATAFILE = data_dir + "hourly_packages_" + datestr + ".json"
+    
+    if os.path.isfile(datafile):
+        return False
     
     try:
         headers = { 'Pragma': 'no-cache', 'Cache-Control': 'no-cache' }        
@@ -32,7 +34,7 @@ def getCWAHourlyDataList(data_dir, datestr):
         
         if r.status_code == 200:
             if ( len(r.content) > 1 ):
-                f = open(DATAFILE, 'w')
+                f = open(datafile, 'w')
                 f.write(r.text)
                 f.close()
                 return json.loads(r.text)        
@@ -124,6 +126,10 @@ if __name__ == "__main__":
         
     # download files with hourly data
     for date_str in date_list:
+
+        # filenames
+        datafile = DATA_DIR + "hourly_packages_" + date_str + ".json"
+        filepath = DATA_DIR + date_str + "/"
         
         # timestamp
         pd = pattern_date.findall(date_str)
@@ -132,14 +138,26 @@ if __name__ == "__main__":
         timestamp = int(datetime.datetime(year=int(pd[0][0]), month=int(pd[0][1]), day=int(pd[0][2]), hour=2).strftime("%s"))
         
         # download list with hourly data
-        hourly_package_list = getCWAHourlyDataList(DATA_DIR, date_str)
-        
+        hourly_package_list = getCWAHourlyDataList(DATA_DIR, date_str, datafile)
+                        
+        # check for existing data directory
         if hourly_package_list == False:
-            continue
+            
+            if os.path.isdir(filepath):                
+                
+                # read existing data and append data array
+                with open(datafile, 'r') as f:
+                    raw_json_data = f.read()
+                    f.close()
+                
+                hourly_package_list = json.loads(raw_json_data)
+                data_list.append( [ timestamp, date_str, hourly_package_list ] )
+                continue    
+            else:                
+                # download failed
+                continue
         
-        # download hourly packages for that day
-        filepath = DATA_DIR + date_str + "/"
-        
+        # new data is available, create the corresponding directory
         if not os.path.isdir(filepath):
             os.makedirs(filepath)
             if not os.path.isdir(filepath):
