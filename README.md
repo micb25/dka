@@ -47,10 +47,6 @@ Summe                                      |  relative Verteilung
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_TRL_histogram_relative.png)
 
-zeitlicher Verlauf                         |    
-:-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_TRL_daily_dist.png)      | ![](plots_de/plot_empty.png) 
-
 ### Verbreitung der Corona-Warn-App
 zeitlicher Verlauf                         |    
 :-----------------------------------------:|:-----------------------------------------:
