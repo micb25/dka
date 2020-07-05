@@ -1,6 +1,6 @@
 load "../gnuplot/template.gnuplot"
 
-set output '../plot_TRL_histogram.png'
+set output '../plots_de/plot_TRL_histogram.png'
 
 # get last update
 date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+3600}' ../data_CWA/transmission_risk_level_statistics.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")

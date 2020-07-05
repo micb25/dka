@@ -10,51 +10,51 @@ Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr
 
 ## Diagramme 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/corona-warn-app/cwa-documentation/issues/258#issuecomment-650760771))
-Täglich                           |  Summe
-:--------------------------------:|:----------------------------------:
-![](plot_num_users.png)           |  ![](plot_sum_users.png)
-                                  |    
-![](plot_num_users_7d.png)        |  ![](plot_empty.png)
+Täglich                                    |  Summe
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_num_users.png)           | ![](plots_de/plot_sum_users.png)
+                                           |    
+![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_empty.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
-gemeldete Neuinfektionen          | Verhältnis
-:--------------------------------:|:----------------------------------:
-![](plot_rki_cases.png)           |  ![](plot_rki_cwa_cases.png)
-                                  |    
-![](plot_rki_cwa_cases_7d.png)    |  ![](plot_empty.png)
+gemeldete Neuinfektionen                   | Verhältnis
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_rki_cwa_cases.png)
+                                           |    
+![](plots_de/plot_rki_cwa_cases_7d.png)    | ![](plots_de/plot_empty.png)
 
 ### Korrelation mit Daten der [Johns Hopkins Universität](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
-gemeldete Neuinfektionen          | Verhältnis
-:--------------------------------:|:----------------------------------:
-![](plot_jhu_cases.png)           |  ![](plot_jhu_cwa_cases.png)
-                                  |    
-![](plot_jhu_cwa_cases_7d.png)    |  ![](plot_empty.png)
+gemeldete Neuinfektionen                   | Verhältnis
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_jhu_cases.png)           | ![](plots_de/plot_jhu_cwa_cases.png)
+                                           |    
+![](plots_de/plot_jhu_cwa_cases_7d.png)    | ![](plots_de/plot_empty.png)
 
 ### Geteilte Diagnoseschlüssel von positiv getesteten Personen ([geschätzt](https://github.com/corona-warn-app/cwa-documentation/issues/258#issuecomment-650760771))
-Täglich                           |  Summe
-:--------------------------------:|:----------------------------------:
- ![](plot_num_keys_submitted.png) |  ![](plot_sum_keys_submitted.png)
+Täglich                                    |  Summe
+:-----------------------------------------:|:-----------------------------------------:
+ ![](plots_de/plot_num_keys_submitted.png) | ![](plots_de/plot_sum_keys_submitted.png)
 
 ### Diagnoseschlüssel
-Täglich                           |  Summe
-:--------------------------------:|:----------------------------------:
- ![](plot_keys.png)               |  ![](plot_keys_sum.png)
-                                  |    
- ![](plot_padding_multiplier.png) |  ![](plot_empty.png) 
+Täglich                                    |  Summe
+:-----------------------------------------:|:-----------------------------------------:
+ ![](plots_de/plot_keys.png)               | ![](plots_de/plot_keys_sum.png)
+                                           |    
+ ![](plots_de/plot_padding_multiplier.png) | ![](plots_de/plot_empty.png) 
  
 ### Verteilung Transmission Risk Level (TRL) in Diagnoseschlüsseln
-Summe                             |  relative Verteilung
-:--------------------------------:|:----------------------------------:
-![](plot_TRL_histogram.png)       | ![](plot_TRL_histogram_relative.png)
+Summe                                      |  relative Verteilung
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_TRL_histogram_relative.png)
 
-zeitlicher Verlauf                |    
-:--------------------------------:|:----------------------------------:
-![](plot_TRL_daily_dist.png)      | ![](plot_empty.png) 
+zeitlicher Verlauf                         |    
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_TRL_daily_dist.png)      | ![](plots_de/plot_empty.png) 
 
 ### Verbreitung der Corona-Warn-App
-zeitlicher Verlauf                |    
-:--------------------------------:|:----------------------------------:
-![](plot_cwa_downloads.png)       | ![](plot_empty.png) 
+zeitlicher Verlauf                         |    
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_empty.png) 
 
 
 ## Erläuterungen

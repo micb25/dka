@@ -1,6 +1,6 @@
 load "template.gnuplot"
 
-set output '../plot_sum_users.png'
+set output '../plots_de/plot_sum_users.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput

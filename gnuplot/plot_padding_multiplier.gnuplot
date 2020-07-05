@@ -1,6 +1,6 @@
 load "template.gnuplot"
 
-set output '../plot_padding_multiplier.png'
+set output '../plots_de/plot_padding_multiplier.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/cwa_padding_multiplier.csv" using 1 nooutput

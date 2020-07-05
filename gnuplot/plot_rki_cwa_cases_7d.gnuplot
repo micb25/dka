@@ -1,6 +1,6 @@
 load "../gnuplot/template.gnuplot"
 
-set output '../plot_rki_cwa_cases_7d.png'
+set output '../plots_de/plot_rki_cwa_cases_7d.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
