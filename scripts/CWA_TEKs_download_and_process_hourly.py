@@ -183,6 +183,36 @@ if __name__ == "__main__":
         
         data_list.append( [ timestamp, date_str, hourly_package_list ] )
         
+    # add existing data
+    for r, d, f in os.walk(DATA_DIR):
+        for direntry in d:
+            
+            dir_found = False
+            
+            for timestamp, date_str, hourly_package_list in data_list:
+                if date_str == direntry:
+                    dir_found = True
+                    break;          
+                    
+            if dir_found == False:
+                    datafile = DATA_DIR + "hourly_packages_" + direntry + ".json"
+                    filepath = DATA_DIR + direntry + "/"
+                    
+                    # generate timestamp
+                    pd = pattern_date.findall(direntry)
+                    if ( len(pd) != 1 ) or ( len(pd[0]) != 3):
+                        continue
+                    timestamp = int(datetime.datetime(year=int(pd[0][0]), month=int(pd[0][1]), day=int(pd[0][2]), hour=2).strftime("%s"))
+                
+                    # read existing data and append data array
+                    with open(datafile, 'r') as f:
+                        raw_json_data = f.read()
+                        f.close()
+                
+                    hourly_package_list = json.loads(raw_json_data)
+                    
+                    data_list.append( [ timestamp, direntry, hourly_package_list ] )
+        
     sorted_data_list = sorted(data_list, key=lambda t: t[0])
     
     ###########################################################################    
