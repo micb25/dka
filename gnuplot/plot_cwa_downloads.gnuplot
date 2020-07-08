@@ -12,6 +12,8 @@ set yrange [ 0 : 10*(1+int(int(1.25*STATS_max)/10.0)) ]
 
 # x-axis setup
 unset xlabel
+set xtics 2*86400
+set mxtics 2
 set xdata time
 set timefmt "%s"
 set format x "%d.%m."
