@@ -43,9 +43,9 @@ Täglich                                    |  Summe
  ![](plots_de/plot_padding_multiplier.png) | ![](plots_de/plot_empty.png) 
  
 ### Verteilung Transmission Risk Level (TRL) in Diagnoseschlüsseln
-Summe                                      |  relative Verteilung
+Summe                                      |    
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_TRL_histogram_relative.png)
+![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_empty.png)
 
 ### Verbreitung der Corona-Warn-App
 zeitlicher Verlauf                         |    
