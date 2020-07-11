@@ -4,7 +4,7 @@ set output '../plots_de/plot_padding_multiplier.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/cwa_padding_multiplier.csv" using 1 nooutput
-set xrange [ STATS_min - 2.5 * 86400 : STATS_max + 3.0 * 86400 ]
+set xrange [ STATS_min - 2.5 * 86400 : STATS_max + 0.75 * 86400 ]
 
 # stats for y
 stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_CWA/cwa_padding_multiplier.csv" using 1 nooutput

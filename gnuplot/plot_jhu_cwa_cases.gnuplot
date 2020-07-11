@@ -4,7 +4,7 @@ set output '../plots_de/plot_jhu_cwa_cases.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 3.0 * 86400 ]
+set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
 
 # get last update
 date_cmd = sprintf("%s", "`awk -F, '{print "@"$1+86400}' ../data_CWA/correlation_CWA_JHU.csv | tail -n 2 | head -n 1 | xargs date +"%d.%m.%Y" -d`")

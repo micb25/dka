@@ -4,7 +4,7 @@ set output '../plots_de/plot_sum_keys_submitted.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 3.0 * 86400 ]
+set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
 
 # x-axis setup
 unset xlabel
@@ -33,4 +33,4 @@ set label 4 at graph 0.50, 0.90 "{/*0.75 (Daten sind geschätzt)" center textcol
 plot  \
   "<awk -F, '{if ( NR > 1 ) print $1, $7}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 6 notitle, \
   \
-  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$7}}END{print a, b, b-c}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 center offset char  0.0, 0.75 tc ls 6 notitle
+  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$7}}END{print a, b, b-c}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char  0.0, 0.75 tc ls 6 notitle
