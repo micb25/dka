@@ -17,17 +17,17 @@ Täglich                                    |  Summe
 ![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_empty.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
-gemeldete Neuinfektionen                   | Verhältnis
+Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_rki_cwa_cases.png)       | ![](plots_de/plot_rki_cwa_cases_7d.png)
-                                           |    
+gemeldete Neuinfektionen                   |    
 ![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_empty.png)
 
 ### Korrelation mit Daten der [Johns Hopkins Universität](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
-gemeldete Neuinfektionen                   | Verhältnis
+Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_jhu_cwa_cases.png)       | ![](plots_de/plot_jhu_cwa_cases_7d.png)
-                                           |    
+gemeldete Neuinfektionen                   |    
 ![](plots_de/plot_jhu_cases.png)           | ![](plots_de/plot_empty.png)
 
 ### Geteilte Diagnoseschlüssel von positiv getesteten Personen ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
