@@ -14,7 +14,7 @@ Täglich                                    |  Summe
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_num_users.png)           | ![](plots_de/plot_sum_users.png)
                                            |    
-![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_empty.png)
+![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_teleTANs.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
 Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
