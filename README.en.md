@@ -42,7 +42,7 @@ per day                                    | sum
 :-----------------------------------------:|:-----------------------------------------:
  ![](plots_en/plot_num_keys_submitted.png) | ![](plots_en/plot_sum_keys_submitted.png)
 
-### Diagnosis keys
+### Distributed diagnosis keys
 per day                                    | sum
 :-----------------------------------------:|:-----------------------------------------:
  ![](plots_en/plot_keys.png)               | ![](plots_en/plot_keys_sum.png)

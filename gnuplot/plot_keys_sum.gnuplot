@@ -48,7 +48,7 @@ update_str = "{/*0.75 last update: " . date_cmd_en . "}"
 set label 1 at graph 0.98, 0.10 update_str right textcolor ls 0
 set label 2 at graph 0.98, 0.05 "{/*0.75 source: Corona-Warn-App}" right textcolor ls 0
 
-set label 3 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Sum of published diagnosis keys}" center textcolor ls 0
+set label 3 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold sum of distributed diagnosis keys}" center textcolor ls 0
 set label 4 at graph 0.50, 0.90 "{/*0.75 (to increase anonymity/security, fictitious diagnosis keys are being published)" center textcolor ls 0
 
 plot  \
