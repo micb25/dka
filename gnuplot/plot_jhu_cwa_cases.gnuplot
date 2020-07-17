@@ -41,5 +41,5 @@ set offsets 0.00, 0.00, graph 0.50, 0.00
 plot  \
   "<awk -F, '{if (NR > 1) {print $1,100*$4}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2 with boxes ls 8 notitle, \
   \
-  "<awk -F, '{if (NR > 1) {print $1,100*$4}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %.1f%%}", column(2)):"") with labels offset 0, graph 0.05 ls 8 
+  "<awk -F, '{if (NR > 1) {print $1,100*$4}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("%.1f%%", column(2)):"") with labels font ",12" rotate by 90 offset -0.02, graph 0.05 ls 8 
   
