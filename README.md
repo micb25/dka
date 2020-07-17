@@ -9,6 +9,11 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
 ## Diagramme 
+### Verbreitung der Corona-Warn-App
+zeitlicher Verlauf                         |    
+:-----------------------------------------:|:-----------------------------------------:
+![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_empty.png) 
+
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
 Täglich                                    |  Summe
 :-----------------------------------------:|:-----------------------------------------:
@@ -46,11 +51,6 @@ Täglich                                    |  Summe
 Summe                                      |    
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_empty.png)
-
-### Verbreitung der Corona-Warn-App
-zeitlicher Verlauf                         |    
-:-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_empty.png) 
 
 
 ## Erläuterungen
