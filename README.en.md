@@ -6,7 +6,7 @@ _[Deutsche Fassung](README.md)_
 
 Statistical analysis of the daily diagnosis keys of the official German COVID-19 tracing app ([Corona-Warn-App](https://github.com/corona-warn-app)). The daily dumps of the diagnosis keys are being analyzed by the [diagnosis-keys](https://github.com/mh-/diagnosis-keys) toolset by [mh-](https://github.com/mh-/). These data can only be [estimated](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md), due to the decentralized architecture of the tracing app. Hence, all information are without any guarantee. All diagrams in this repository are licensed under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/). See [coronawarn.app](https://www.coronawarn.app) for more information about the COVID-19 tracing app for Germany.
 
-**Link to website with diagrams: [https://micb25.github.io/dka/](https://micb25.github.io/dka/)**
+**Link to website with diagrams: [https://micb25.github.io/dka/](https://micb25.github.io/dka/index_en.html)**
 
 An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
