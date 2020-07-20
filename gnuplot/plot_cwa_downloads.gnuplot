@@ -6,10 +6,6 @@ set output '../plots_de/plot_cwa_downloads.png'
 stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_RKI/cwa_statistics.csv" using 1 nooutput
 set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 4.0 * 86400 ]
 
-# stats for y
-stats "<awk -F, '{if ( NR > 1 ) print $3/1000000}' ../data_RKI/cwa_statistics.csv" using 1 nooutput
-set yrange [ 0 : 10*(1+int(int(1.25*STATS_max)/10.0)) ]
-
 # x-axis setup
 unset xlabel
 set xtics 2*86400
@@ -23,6 +19,8 @@ unset ylabel
 
 # key
 unset key
+
+set offsets 0.00, 0.00, graph 0.30, 0.00
 
 # date
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($2+7200)}' ../data_RKI/cwa_statistics.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
