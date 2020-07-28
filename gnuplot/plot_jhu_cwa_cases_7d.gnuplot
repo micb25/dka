@@ -59,7 +59,8 @@ set label 3 at graph 0.50, 0.83 "{/Linux-Libertine-O-Bold and the new infections
 set label 4 at graph 0.50, 0.78 update_str center textcolor ls 0
 
 plot  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2 with linespoints ls 8 notitle, \
-  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %.1f%%}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 8, \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %.1f%%}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 8
+  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2 with linespoints ls 8 notitle
+
+#  \
+#  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %.1f%%}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 8, \
+#  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=100*$4;b=0;for(i=0;i<7; i++){b=b+a[i]};b = b / 7; print $1,b}}' ../data_CWA/correlation_CWA_JHU.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %.1f%%}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 8
