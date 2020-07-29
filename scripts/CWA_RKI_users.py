@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 
-import json, os, sys
+import datetime, json, os, sys
+
+
+def timestampToWeekNum(ts):
+    try:
+        week_num = int(datetime.datetime.utcfromtimestamp(ts - 86400).strftime("%U"))
+        year     = int(datetime.datetime.utcfromtimestamp(ts).strftime("%Y"))
+        return [week_num, year]
+    except:
+        return False
+    return False
+
 
 if __name__ == "__main__":
     
@@ -14,6 +25,9 @@ if __name__ == "__main__":
     
     CORR_JSON_FILE = CWA_DATA_DIR + "correlation_CWA_RKI.json"
     CORR_CSV_FILE  = CWA_DATA_DIR + "correlation_CWA_RKI.csv"
+    
+    WCOR_JSON_FILE = CWA_DATA_DIR + "correlation_CWA_RKI_per_week.json"
+    WCOR_CSV_FILE  = CWA_DATA_DIR + "correlation_CWA_RKI_per_week.csv"
 
     # read CWA JSON from disk
     try:
@@ -41,6 +55,10 @@ if __name__ == "__main__":
         print("Error! Cannot read or parse RKI CSV data!")
         sys.exit(1)
         
+    ###########################################################################
+    ##### daily data
+    ###########################################################################        
+    
     final_data = []
         
     # correlate users of CWA and RKI
@@ -71,3 +89,51 @@ if __name__ == "__main__":
     with open(CORR_JSON_FILE, 'w') as f:
         f.write(json.dumps(final_data, sort_keys=True))
         f.close()        
+
+    ###########################################################################
+    ##### weekly data
+    ###########################################################################
+    
+    weekly_data = {}
+    
+    # generate weekly data
+    for entry in final_data:
+        
+        convTS = timestampToWeekNum(entry[0])
+        if convTS == False:
+            continue
+        
+        week_num, year = convTS
+        
+        # initialize arrays
+        if year not in weekly_data:
+            weekly_data[year] = {}
+            
+        if week_num not in weekly_data[year]:
+            weekly_data[year][week_num] = [0, 0, 0]
+            
+        # add cases and update ratio
+        weekly_data[year][week_num][0] += entry[1]
+        weekly_data[year][week_num][1] += entry[2]
+        weekly_data[year][week_num][2] = weekly_data[year][week_num][1] / weekly_data[year][week_num][0] if weekly_data[year][week_num][0] != 0 else 0.0
+    
+    final_weekly_data = []
+    for year in weekly_data:
+        for week in weekly_data[year]:
+            final_weekly_data.append([year, week, weekly_data[year][week][0], weekly_data[year][week][1], weekly_data[year][week][2] ])
+    
+    # generate CSV
+    str_wcor_csv = "#year, week_num, new_cases_RKI, num_users_submitted_keys, ratio_CWA_RKI\n"
+    for data in final_weekly_data:
+        str_wcor_csv += "{},{},{},{},{:.6f}\n".format(data[0], data[1], data[2], data[3], data[4])
+    
+    # write CSV with weekly data to disk
+    with open(WCOR_CSV_FILE, 'w') as f:
+        f.write(str_wcor_csv)
+        f.close()
+            
+    # write JSON to disk
+    with open(WCOR_JSON_FILE, 'w') as f:
+        f.write(json.dumps(final_weekly_data, sort_keys=True))
+        f.close()        
+    

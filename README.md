@@ -11,24 +11,24 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
 ## Diagramme 
-### Verbreitung der Corona-Warn-App
-zeitlicher Verlauf                         |    
+### Verwendung der Corona-Warn-App
+Downloads                                  | ausgestellte teleTANs
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_empty.png) 
+![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_teleTANs.png) 
 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-Täglich                                    |  Summe
+Täglich                                    | Summe
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_num_users.png)           | ![](plots_de/plot_sum_users.png)
+![](plots_de/plot_num_users.png)           | ![](plots_de/plot_num_users_per_week.png)
                                            |    
-![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_teleTANs.png)
+![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_sum_users.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
 Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_rki_cwa_cases.png)       | ![](plots_de/plot_rki_cwa_cases_7d.png)
-**gemeldete Neuinfektionen**               |    
-![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_empty.png)
+**gemeldete Neuinfektionen**               | **gemeldete Neuinfektionen (pro KW)**
+![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_rki_cases_per_week.png)
 
 ### Korrelation mit Daten der [Johns Hopkins Universität](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
 Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)

@@ -11,24 +11,24 @@ Statistical analysis of the daily diagnosis keys of the official German COVID-19
 An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
 ## Diagrams 
-### Downloads of the Corona-Warn-App
-progress                                   |    
+### Usage of the Corona-Warn-App
+downloads                                  | issued teleTANs
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_empty.png) 
+![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_teleTANs.png) 
 
 ### Positively tested people sharing their diagnosis keys ([estimates](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-per day                                    |  sum
+per day                                    | sum
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_en/plot_num_users.png)           | ![](plots_en/plot_sum_users.png)
+![](plots_en/plot_num_users.png)           | ![](plots_en/plot_num_users_per_week.png)
                                            |    
-![](plots_en/plot_num_users_7d.png)        | ![](plots_en/plot_teleTANs.png)
+![](plots_en/plot_num_users_7d.png)        | ![](plots_en/plot_sum_users.png)
 
 ### Correlation with German COVID-19 data of the [Robert Koch Institute](https://corona.rki.de/) (RKI)
 ratio                                      | ratio (7-day average)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_en/plot_rki_cwa_cases.png)       | ![](plots_en/plot_rki_cwa_cases_7d.png)
-**reported new infections**               |    
-![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_empty.png)
+**reported new infections**                | **reported new infections (per week)**
+![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_rki_cases_per_week.png)
 
 ### Correlation with German COVID-19 data of the [Johns Hopkins University](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
 ratio                                      | ratio (7-day average)
