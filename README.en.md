@@ -17,10 +17,10 @@ downloads                                  | issued teleTANs
 ![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_teleTANs.png) 
 
 ### Positively tested people sharing their diagnosis keys ([estimates](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-per day                                    | sum
+per day                                    | per week
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_en/plot_num_users.png)           | ![](plots_en/plot_num_users_per_week.png)
-                                           |    
+**per day (7-day average)**                | **sum**
 ![](plots_en/plot_num_users_7d.png)        | ![](plots_en/plot_sum_users.png)
 
 ### Correlation with German COVID-19 data of the [Robert Koch Institute](https://corona.rki.de/) (RKI)

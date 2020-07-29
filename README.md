@@ -17,10 +17,10 @@ Downloads                                  | ausgestellte teleTANs
 ![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_teleTANs.png) 
 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-Täglich                                    | Summe
+Täglich                                    | Wöchentlich
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_num_users.png)           | ![](plots_de/plot_num_users_per_week.png)
-                                           |    
+**Täglich (7-Tage-Mittelwert)**            | **Summe**   
 ![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_sum_users.png)
 
 ### Korrelation mit Daten des [Robert Koch-Instituts](https://corona.rki.de/) (RKI)
