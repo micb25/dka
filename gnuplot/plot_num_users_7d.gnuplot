@@ -33,10 +33,10 @@ set label 2 at graph 0.50, 0.89 "{/Linux-Libertine-O-Bold täglich positiv getes
 set label 3 at graph 0.50, 0.83 "{/*0.75 (Daten sind geschätzt}; " . update_str . "{/*0.75 )}" center textcolor ls 0
 
 plot  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 2 notitle, \
-  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 10, \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 10
+  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 2 notitle #, \
+  # \
+  # "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 10, \
+  # "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 10
 
 ##################################### English
 
@@ -51,7 +51,8 @@ set label 2 at graph 0.50, 0.89 "{/Linux-Libertine-O-Bold positively tested peop
 set label 3 at graph 0.50, 0.83 "{/*0.75 (estimated values; " . update_str . ")}" center textcolor ls 0
 
 plot  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 2 notitle, \
-  \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 10, \
-  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 10
+  "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 2 notitle #, \
+  
+  #\
+  # "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::0 with labels offset 0, graph -0.05 ls 10, \
+  # "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if (NR > 1) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(column(2)>0?sprintf("{/*0.85 %i}", column(2)):"") every 2::1 with labels offset 0, graph +0.05 ls 10
