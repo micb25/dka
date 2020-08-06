@@ -5,7 +5,7 @@ import datetime, json, os, sys
 
 def timestampToWeekNum(ts):
     try:
-        week_num = int(datetime.datetime.utcfromtimestamp(ts - 86400).strftime("%U"))
+        week_num = int(datetime.datetime.utcfromtimestamp(ts - 86400).strftime("%U")) + 1
         year     = int(datetime.datetime.utcfromtimestamp(ts).strftime("%Y"))
         return [week_num, year]
     except:
