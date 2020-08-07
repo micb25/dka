@@ -51,7 +51,9 @@ def getCWAHourlyPackage(data_dir, datestr, hour, output):
         r = requests.get(DOWNLOAD_URL, headers=headers, allow_redirects=True, timeout=5.0, stream=True)
         
         if r.status_code == 200:
-            if ( len(r.content) > 1 ):
+            # check for empty packages 
+            # signature = approx. 475 bytes
+            if ( len(r.content) >= 500 ):
                 f = open(output, 'wb')
                 f.write(r.content)
                 f.close()
@@ -139,6 +141,7 @@ if __name__ == "__main__":
         
         # download list with hourly data
         hourly_package_list = getCWAHourlyDataList(DATA_DIR, date_str, datafile)
+        hourly_package_list_okay = []
                         
         # check for existing data directory
         if hourly_package_list == False:
@@ -173,15 +176,23 @@ if __name__ == "__main__":
             # download hourly package
             if not os.path.isfile(fn_output):
                 if getCWAHourlyPackage(filepath, date_str, hour, fn_output) == False:
-                    print("Error! Could not download hourly package!")
+                    print("Error! Could not download hourly package or package is empty ({}_{})!".format(date_str, hour))
                     continue
+                else:
+                    hourly_package_list_okay.append(hour)
+            else:
+                hourly_package_list_okay.append(hour)
             
             # analyse hourly packages
             if not os.path.isfile(fn_analysis):
                 os.system("../diagnosis-keys/parse_keys.py --auto-multiplier -m 5 -n -u -l -d {} > {}".format(fn_output, fn_analysis))
-                anonymize_TEKs(fn_analysis)        
+                anonymize_TEKs(fn_analysis)
         
-        data_list.append( [ timestamp, date_str, hourly_package_list ] )
+        data_list.append( [ timestamp, date_str, hourly_package_list_okay ] )
+        
+        # rewrite JSON with cleaned hourly package list
+        with open(datafile, 'w') as f:
+            json.dump(hourly_package_list_okay, f)
         
     # add existing data
     for r, d, f in os.walk(DATA_DIR):
