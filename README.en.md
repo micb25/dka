@@ -11,7 +11,7 @@ Statistical analysis of the daily diagnosis keys of the official German COVID-19
 An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
 ## Diagrams 
-### Usage of the Corona-Warn-App
+### Usage of the Corona-Warn-App ([RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html))
 downloads                                  | issued teleTANs
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_teleTANs.png) 
