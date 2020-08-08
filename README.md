@@ -11,7 +11,7 @@ Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen
 Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
 
 ## Diagramme 
-### Verwendung der Corona-Warn-App
+### Verwendung der Corona-Warn-App ([RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html))
 Downloads                                  | ausgestellte teleTANs
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_teleTANs.png) 
