@@ -18,12 +18,14 @@ set format x "%d.%m."
 unset ylabel
 
 # key
-unset key
+set key at graph 0.33, 0.20 spacing 1.2 
 
-set offsets 0.00, 0.00, graph 0.30, 0.00
+set offsets 0.00, 0.00, graph 0.20, 0.00
 
 # date
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($2+7200)}' ../data_RKI/cwa_statistics.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
+
+filter_neg(x) = x >= 0 ? x : 1/0
 
 ##################################### German
 
@@ -35,9 +37,13 @@ set label 2 at graph 0.98, 0.05 "{/*0.75 Quelle: Robert Koch-Institut}" right te
 set label 3 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Anzahl der Downloads der Corona-Warn-App (in Millionen)}" center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $2, $3/1000000}' ../data_RKI/cwa_statistics.csv" using 1:2 with linespoints ls 1 notitle, \
+  "<awk -F, '{if ( NR > 1 ) print $2, $3/1000000}' ../data_RKI/cwa_statistics.csv" using 1:2 with linespoints ls 1 title "Summe", \
+  "<awk -F, '{if ( NR > 1 ) print $2, $4/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 31 title "Android", \
+  "<awk -F, '{if ( NR > 1 ) print $2, $5/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 32 title "iOS", \
   \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 center offset char  0.0, 0.75 tc ls 1 notitle
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 1 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 31 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-0.95 tc ls 32 notitle
 
 ##################################### English
   
@@ -53,7 +59,11 @@ set label 2 at graph 0.98, 0.05 "{/*0.75 source: Robert Koch Institute}" right t
 set label 3 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold Number of downloads of Corona-Warn-App (in millions)}" center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $2, $3/1000000}' ../data_RKI/cwa_statistics.csv" using 1:2 with linespoints ls 1 notitle, \
+  "<awk -F, '{if ( NR > 1 ) print $2, $3/1000000}' ../data_RKI/cwa_statistics.csv" using 1:2 with linespoints ls 1 title "sum", \
+  "<awk -F, '{if ( NR > 1 ) print $2, $4/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 31 title "Android", \
+  "<awk -F, '{if ( NR > 1 ) print $2, $5/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 32 title "iOS", \
   \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 center offset char  0.0, 0.75 tc ls 1 notitle
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 1 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 31 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-0.95 tc ls 32 notitle
   
