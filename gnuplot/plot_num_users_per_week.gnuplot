@@ -24,6 +24,8 @@ set style fill solid 1.00
 
 set offsets 0.00, 0.00, graph 0.33, 0.00
 
+current_week = date_cmd = sprintf("%s", "`awk -F, '{print "@"($1+7200)}' ../data_CWA/correlation_CWA_RKI.csv | tail -n 1 | xargs date +"%V" -d`")
+
 ##################################### German
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($1)}' ../data_CWA/diagnosis_keys_statistics.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
 update_str = "letztes Update: " . date_cmd . "; Quelle: Corona-Warn-App"
@@ -32,9 +34,10 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold wöchentl. positiv get
 set label 2 at graph 0.50, 0.90 "{/*0.75 (Daten sind geschätzt; " . update_str . ")}" center textcolor ls 0
 
 plot \
-  "<awk -F, '{if ( NR > 1 ) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 2 notitle, \
+  "<awk -F, '{if ((NR>1)&&($2<".current_week.")) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 2 notitle, \
+  "<awk -F, '{if ((NR>1)&&($2==".current_week.")) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes fs pattern 2 ls 2 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$4; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf("%i", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 center offset char -0.40, 0.80 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$4; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i (unvollständig)", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
 
 ##################################### English
 set format x 'wk %2.0f'
@@ -47,6 +50,7 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold positively tested peop
 set label 2 at graph 0.50, 0.90 "{/*0.75 (estimated values; " . update_str . ")}" center textcolor ls 0
 
 plot \
-  "<awk -F, '{if ( NR > 1 ) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 2 notitle, \
+  "<awk -F, '{if ((NR>1)&&($2<".current_week.")) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 2 notitle, \
+  "<awk -F, '{if ((NR>1)&&($2==".current_week.")) print $2, $4}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes fs pattern 2 ls 2 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$4; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf("%i", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 center offset char -0.40, 0.80 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$4; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i (incomplete)", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
