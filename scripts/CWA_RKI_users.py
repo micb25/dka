@@ -67,8 +67,11 @@ if __name__ == "__main__":
         pos_cases_day = False
         
         # find the closest RKI date to the CWA timestamp data
+        # one day shift needs to be removed from the RKI date, 
+        # since the RKI reports exactly at midnight
+        # ... and always add the last entry
         for rki_data in rki_case_numbers:
-            if ( abs(rki_data[0] - timestamp) < 86400 ):
+            if ( abs(rki_data[0] - ( 86400 if timestamp != sorted_data[-1][0] else 0 ) - timestamp) < 86400 ):
                 pos_cases_day = rki_data[1]
                 break        
         
