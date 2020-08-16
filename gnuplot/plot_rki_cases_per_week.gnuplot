@@ -22,7 +22,7 @@ unset key
 set boxwidth 0.75
 set style fill solid 1.00
 
-set offsets 0.00, 0.00, graph 0.33, 0.00
+set offsets 0.00, 0.00, graph 0.55, 0.00
 
 current_week = date_cmd = sprintf("%s", "`awk -F, '{print "@"($1+7200)}' ../data_CWA/correlation_CWA_RKI.csv | tail -n 1 | xargs date +"%V" -d`")
 
@@ -37,7 +37,7 @@ plot \
   "<awk -F, '{if ((NR>1)&&($2<".current_week.")) print $2, $3}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 7 notitle, \
   "<awk -F, '{if ((NR>1)&&($2==".current_week.")) print $2, $3}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes fs pattern 2 ls 7 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$3; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i (unvollständig)", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$3; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i {/*0.75 (unvollständig)}", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
 
 ##################################### English
 set format x 'wk %2.0f'
@@ -53,4 +53,4 @@ plot \
   "<awk -F, '{if ((NR>1)&&($2<".current_week.")) print $2, $3}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes ls 7 notitle, \
   "<awk -F, '{if ((NR>1)&&($2==".current_week.")) print $2, $3}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2 with boxes fs pattern 2 ls 7 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$3; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i (incomplete)", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$2;c=b;b=$3; print a, b, b-c}}' ../data_CWA/correlation_CWA_RKI_per_week.csv" using 1:2:(sprintf(current_week != $1 ? "%i" : "%i {/*0.75 (incomplete)}", $2)) with labels font ",12" rotate by 90 point ls 2 ps 0.0 left offset char -0.40, 0.80 tc ls 10 notitle
