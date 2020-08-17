@@ -24,7 +24,7 @@ set style fill solid 1.00
 
 set offsets 0.00, 0.00, graph 0.50, 0.00
 
-current_week = date_cmd = sprintf("%s", "`awk -F, '{print "@"($1+7200)}' ../data_CWA/correlation_CWA_RKI.csv | tail -n 1 | xargs date +"%V" -d`")
+current_week = sprintf("%s", "`date +"%V"`")
 
 ##################################### German
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($1)}' ../data_CWA/diagnosis_keys_statistics.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
