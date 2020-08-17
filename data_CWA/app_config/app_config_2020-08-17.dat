@@ -1,0 +1,89 @@
+minRiskScore: 11
+riskScoreClasses {
+  risk_classes {
+    label: "LOW"
+    max: 15
+    url: "https://www.coronawarn.app"
+  }
+  risk_classes {
+    label: "HIGH"
+    min: 15
+    max: 72
+    url: "https://www.coronawarn.app"
+  }
+}
+exposureConfig {
+  transmission {
+    appDefined_1: LOWEST
+    appDefined_2: LOW
+    appDefined_3: LOW_MEDIUM
+    appDefined_4: MEDIUM
+    appDefined_5: MEDIUM_HIGH
+    appDefined_6: HIGH
+    appDefined_7: VERY_HIGH
+    appDefined_8: HIGHEST
+  }
+  transmissionWeight: 50.0
+  duration {
+    gt_10_le_15_min: LOWEST
+    gt_15_le_20_min: LOWEST
+    gt_20_le_25_min: LOWEST
+    gt_25_le_30_min: LOWEST
+    gt_30_min: LOWEST
+  }
+  durationWeight: 50.0
+  daysSinceLastExposure {
+    ge_14_days: MEDIUM_HIGH
+    ge_12_lt_14_days: MEDIUM_HIGH
+    ge_10_lt_12_days: MEDIUM_HIGH
+    ge_8_lt_10_days: MEDIUM_HIGH
+    ge_6_lt_8_days: MEDIUM_HIGH
+    ge_4_lt_6_days: MEDIUM_HIGH
+    ge_2_lt_4_days: MEDIUM_HIGH
+    ge_0_lt_2_days: MEDIUM_HIGH
+  }
+  daysWeight: 20.0
+  attenuation {
+    gt_63_le_73_dbm: LOWEST
+    gt_51_le_63_dbm: LOWEST
+    gt_33_le_51_dbm: LOWEST
+    gt_27_le_33_dbm: LOWEST
+    gt_15_le_27_dbm: LOWEST
+    gt_10_le_15_dbm: LOWEST
+    le_10_dbm: LOWEST
+  }
+  attenuationWeight: 50.0
+}
+attenuationDuration {
+  thresholds {
+    lower: 55
+    upper: 63
+  }
+  weights {
+    low: 1.0
+    mid: 0.5
+  }
+  riskScoreNormalizationDivisor: 25
+}
+appVersion {
+  ios {
+    latest {
+      minor: 8
+      patch: 2
+    }
+    min {
+      minor: 5
+    }
+  }
+  android {
+    latest {
+      major: 1
+      patch: 4
+    }
+    min {
+      major: 1
+      patch: 4
+    }
+  }
+}
+
