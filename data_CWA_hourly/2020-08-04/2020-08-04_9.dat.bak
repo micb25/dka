@@ -1,11 +1,12 @@
 Exposure Notification Diagnosis Key Parser
 This script parses published Diagnosis Keys.
 
-File '2020-08-04_9.zip' read.
+File '/home/michael/coding/dka/scripts/../data_CWA_hourly/2020-08-04/2020-08-04_9.zip' read.
 - Time window: 2020-08-04 11:00:00 CEST - 2020-08-04 12:00:00 CEST
 - Region: DE
 - Batch: 1 of 1
 - Signature Info:
+app_bundle_id: "de.rki.coronawarnapp"
 verification_key_version: "v1"
 verification_key_id: "262"
 signature_algorithm: "1.2.840.10045.4.3.2"
@@ -159,15 +160,15 @@ Diagnosis Keys:
 146: TEK: f94de6b4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2020-08-02 02:00:00 CEST - 2020-08-03 02:00:00 CEST (2660544, 144)
 147: TEK: fcc03ddbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2020-07-29 02:00:00 CEST - 2020-07-30 02:00:00 CEST (2659968, 144)
 148: TEK: fd4fe772XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2020-07-28 02:00:00 CEST - 2020-07-29 02:00:00 CEST (2659824, 144)
-
-Revised Diagnosis Keys:
-(none)
 Parsing the Diagnosis Key list, counting unique users...
-Length: 148 keys (29 without padding)
-WARNING: Apparently the list is not padded by 5!
-3 user(s) found.
+Length: 148 keys
+Padding Multiplier detected: 1
+15 user(s) found.
 They submitted these numbers of keys:
-1 user(s): 6 Diagnosis Key(s)
-1 user(s): 13 Diagnosis Key(s)
-16 keys not parsed (3 without padding).
-3 / 1*6, 1*13
+1 user(s): 1 Diagnosis Key(s)
+4 user(s): 7 Diagnosis Key(s)
+1 user(s): 10 Diagnosis Key(s)
+4 user(s): 11 Diagnosis Key(s)
+5 user(s): 13 Diagnosis Key(s)
+0 keys not parsed (0 without padding).
+15 / 1*1, 4*7, 1*10, 4*11, 5*13
