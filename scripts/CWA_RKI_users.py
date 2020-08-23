@@ -5,7 +5,7 @@ import datetime, json, os, sys
 
 def timestampToWeekNum(ts):
     try:
-        week_num = int(datetime.datetime.utcfromtimestamp(ts).strftime("%W")) + 1
+        week_num = int(datetime.datetime.utcfromtimestamp(ts + 86400).strftime("%W")) + 1
         year     = int(datetime.datetime.utcfromtimestamp(ts).strftime("%Y"))
         return [week_num, year]
     except:
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     weekly_data = {}
     
     # generate weekly data
-    for entry in final_data:
+    for entry in final_data[:-1]:
         
         convTS = timestampToWeekNum(entry[0])
         if convTS == False:
