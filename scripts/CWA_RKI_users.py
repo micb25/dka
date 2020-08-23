@@ -100,7 +100,7 @@ if __name__ == "__main__":
     weekly_data = {}
     
     # generate weekly data
-    for entry in final_data:
+    for entry in final_data[:-1]:
         
         convTS = timestampToWeekNum(entry[0])
         if convTS == False:
