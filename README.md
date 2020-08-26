@@ -27,8 +27,10 @@ Täglich                                    | Wöchentlich
 Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_rki_cwa_cases.png)       | ![](plots_de/plot_rki_cwa_cases_7d.png)
-**gemeldete Neuinfektionen**               | **gemeldete Neuinfektionen (pro KW)**
-![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_rki_cases_per_week.png)
+**Verhältnis (nach Kalenderwoche)**        | **gemeldete Neuinfektionen (pro KW)**
+![](plots_de/plot_rki_cwa_per_week.png)    | ![](plots_de/plot_rki_cases_per_week.png)
+**gemeldete Neuinfektionen**               |  
+![](plots_de/plot_rki_cases.png)           | ![](plots_de/plot_empty.png)
 
 ### Korrelation mit Daten der [Johns Hopkins Universität](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
 Verhältnis                                 | Verhältnis (7-Tage-Mittelwert)
