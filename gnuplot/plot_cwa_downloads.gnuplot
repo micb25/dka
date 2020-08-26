@@ -8,8 +8,6 @@ set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 4.0 * 86400 ]
 
 # x-axis setup
 unset xlabel
-set xtics 2*86400
-set mxtics 2
 set xdata time
 set timefmt "%s"
 set format x "%d.%m."
