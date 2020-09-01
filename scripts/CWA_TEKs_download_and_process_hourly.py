@@ -185,7 +185,7 @@ if __name__ == "__main__":
             
             # analyse hourly packages
             if not os.path.isfile(fn_analysis):
-                os.system("../diagnosis-keys/parse_keys.py --auto-multiplier -m 5 -n -u -l -d {} > {}".format(fn_output, fn_analysis))
+                os.system("../diagnosis-keys/parse_keys.py -m 5 -n -u -l -d {} > {}".format(fn_output, fn_analysis))
                 anonymize_TEKs(fn_analysis)
         
         data_list.append( [ timestamp, date_str, hourly_package_list_okay ] )
