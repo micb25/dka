@@ -17,6 +17,7 @@ if __name__ == "__main__":
     # generate list of analyzed files
     pattern_date = re.compile(r"hourly_packages_([0-9]{4})-([0-9]{2})-([0-9]{2}).json") 
     pattern_multiplier = re.compile(r"Padding Multiplier detected: ([0-9]{1,})")
+    pattern_mult_man   = re.compile(r"Length: ([0-9]{1,}) keys \(([0-9]{1,}) without padding\)")
     
     # results
     data_array = []
@@ -51,12 +52,22 @@ if __name__ == "__main__":
 
                         # find regular expression
                         pm = pattern_multiplier.findall(package_data)
+                        
                         if ( len(pm) != 1 ):
-                            continue
+                            
+                            # calculate multiplier
+                            pm2 = pattern_mult_man.findall(package_data)
+                            if ( len(pm2) != 1 ):
+                                continue
+                            
+                            pad_mult = int( int(pm2[0][0]) / int(pm2[0][1]) )
+                            
+                        else:
+                            pad_mult = int(pm[0])
                         
                         # add multiplier
                         timestamp = int(datetime.datetime(year=int(pd[0][0]), month=int(pd[0][1]), day=int(pd[0][2]), hour=hour).strftime("%s"))
-                        data_array.append( [ timestamp, int(pm[0])] )                        
+                        data_array.append( [ timestamp, pad_mult ] )                        
                     
     # sort data by timestamp
     sorted_data = sorted(data_array, key=lambda t: t[0])
