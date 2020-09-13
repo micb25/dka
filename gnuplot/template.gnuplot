@@ -7,9 +7,9 @@ set fit errorvariables
 
 # margins
 set lmargin 13.60
-set rmargin 1.45
-set tmargin 0.75
-set bmargin 3.75
+set rmargin 1.25
+set tmargin 0.55
+set bmargin 3.00
 
 # colors and plot style
 set style line  1 lc rgb '#0000FF' lt 1 lw 1 pt 7 ps 2.00
