@@ -22,7 +22,7 @@ unset ylabel
 # key
 unset key
 
-set boxwidth 0.75*86400
+set boxwidth 0.60*86400
 set style fill solid 1.00
 
 set offsets 0.00, 0.00, graph 0.20, 0.00

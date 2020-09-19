@@ -24,7 +24,7 @@ unset grid
 set grid ytics ls 21 lc rgb '#aaaaaa'
 
 # bars
-set boxwidth 0.75*86400
+set boxwidth 0.60*86400
 set style fill solid 1.00
 
 set offsets 0.00, 0.00, graph 0.50, 0.00

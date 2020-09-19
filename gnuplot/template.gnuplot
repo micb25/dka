@@ -38,7 +38,7 @@ set grid ytics ls 21 lc rgb '#aaaaaa'
 # misc
 set samples 30
 set style increment default
- set style fill transparent solid 0.20 border
+set style fill transparent solid 0.20 border
 
 # axes
 set xtics 4*86400 out nomirror rotate by 90 offset 0, -1.8 scale 1.2
