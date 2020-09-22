@@ -33,7 +33,7 @@ set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 plot  \
   "<awk -F, '{if ((NR>1)&&($4>=0)) print $2, $4}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2 with linespoints ls 5 dt "." notitle, \
   \
-  "<awk -F, '{if ((NR>1)&&($4>=0)) {a=$2;c=b;b=$4;if (b>0) print a, b, b-c}}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc ls 5 notitle
+  "<awk -F, '{if ((NR>1)&&($4>=0)) {a=$2;c=b;b=$4;if (b>0) print a, b, b-c}}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2:(sprintf("{/*0.75 %i (%+i)}", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc ls 5 notitle
 
 ##################################### English
 
@@ -49,4 +49,4 @@ set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 plot  \
   "<awk -F, '{if ((NR>1)&&($4>=0)) print $2, $4}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2 with linespoints ls 5 dt "." notitle, \
   \
-  "<awk -F, '{if ((NR>1)&&($4>=0)) {a=$2;c=b;b=$4;if (b>0) print a, b, b-c}}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc ls 5 notitle
+  "<awk -F, '{if ((NR>1)&&($4>=0)) {a=$2;c=b;b=$4;if (b>0) print a, b, b-c}}' ../data_RKI/cwa_hotline_statistics.csv" using 1:2:(sprintf("{/*0.75 %i (%+i)}", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc ls 5 notitle
