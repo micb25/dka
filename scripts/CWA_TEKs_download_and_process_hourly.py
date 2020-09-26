@@ -240,9 +240,10 @@ if __name__ == "__main__":
     trl_data = []
     trl_sum_data = [ 0, 0, 0, 0, 0, 0, 0, 0 ]
     sum_keys = sum_users = sum_subbmited_keys = 0
+    sum_invalid_profile_users = 0
     
     # add an empty entry as origin (2020-06-22)
-    date_list.append([1592784000, 0, 0, 0, 0, 0, 0])
+    date_list.append([1592784000, 0, 0, 0, 0, 0, 0, 0, 0])
     trl_data.append([1592784000, [0, 0, 0, 0, 0, 0, 0, 0]])    
     
     # read processed files
@@ -254,6 +255,7 @@ if __name__ == "__main__":
             continue
             
         num_keys = num_users = num_subbmited_keys = 0
+        num_invalid_profile_users = 0
         
         for hour in hours:
             filename = filepath + date_str + "_" + str(hour) + ".dat"
@@ -290,9 +292,10 @@ if __name__ == "__main__":
                 num_users += int(pu[0])
                 
             # subtract invalid users
-            #pi = pattern_invalid_users.findall(raw_data)
-            #if ( len(pi) == 1 ):
-            #    num_users -= int(pi[0])
+            pi = pattern_invalid_users.findall(raw_data)
+            if ( len(pi) == 1 ):
+                num_invalid_profile_users += int(pi[0])
+                num_users -= int(pi[0])
                 
             # number of submitted keys
             ps = pattern_num_subm.findall(raw_data)
@@ -304,8 +307,9 @@ if __name__ == "__main__":
         sum_keys += num_keys
         sum_users += num_users
         sum_subbmited_keys += num_subbmited_keys
+        sum_invalid_profile_users += num_invalid_profile_users
                 
-        date_list.append([timestamp, num_keys, num_users, num_subbmited_keys, sum_keys, sum_users, sum_subbmited_keys])
+        date_list.append([timestamp, num_keys, num_users, num_subbmited_keys, sum_keys, sum_users, sum_subbmited_keys, num_invalid_profile_users, sum_invalid_profile_users])
     
     # add TRL sums
     trl_data.append([0, trl_sum_data])
@@ -317,9 +321,9 @@ if __name__ == "__main__":
     ##### Temporary Exposure Keys (TEKs)
     
     # generate csv
-    str_csv = "#timestamp, num_keys, num_users_submitted_keys, num_submitted_keys, sum_keys, sum_users_submitted_keys, sum_submitted_keys\n"
+    str_csv = "#timestamp, num_keys, num_users_submitted_keys, num_submitted_keys, sum_keys, sum_users_submitted_keys, sum_submitted_keys, num_invalid_profile_users, sum_invalid_profile_users\n"
     for line in date_list:
-        str_csv += "{},{},{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], line[4], line[5], line[6])
+        str_csv += "{},{},{},{},{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8])
         
     # write csv to disk
     with open(DKS_CSV_FILE, 'w') as f:
