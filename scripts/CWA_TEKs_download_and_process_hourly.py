@@ -302,7 +302,12 @@ if __name__ == "__main__":
             if ( len(ps) > 0 ):
                 for line in ps:
                     if ( len(line) == 2 ):
-                        num_subbmited_keys += int(line[0])*int(line[1])
+                        # workaround for strange hour=3 and key_length=1 users
+                        if (hour == 3) and int(line[1]) == 1:
+                            num_users -= int(line[0])
+                        else:
+                            num_subbmited_keys += int(line[0])*int(line[1])
+                
                 
         sum_keys += num_keys
         sum_users += num_users
