@@ -4,7 +4,10 @@ set output '../plots_de/plot_cwa_downloads.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_RKI/cwa_statistics.csv" using 1 nooutput
-set xrange [ STATS_min - 0.5 * 86400 : STATS_max + 4.0 * 86400 ]
+xmin = STATS_min - 0.5 * 86400
+stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
+xmax = STATS_max + 0.75 * 86400
+set xrange [ xmin : xmax ]
 
 # x-axis setup
 unset xlabel
@@ -39,9 +42,9 @@ plot  \
   "<awk -F, '{if ( NR > 1 ) print $2, $4/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 31 title "Android", \
   "<awk -F, '{if ( NR > 1 ) print $2, $5/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 32 title "iOS", \
   \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 1 notitle, \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 31 notitle, \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-0.95 tc ls 32 notitle
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 31 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-1.05 tc ls 32 notitle
 
 ##################################### English
   
@@ -61,7 +64,7 @@ plot  \
   "<awk -F, '{if ( NR > 1 ) print $2, $4/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 31 title "Android", \
   "<awk -F, '{if ( NR > 1 ) print $2, $5/1000000}' ../data_RKI/cwa_statistics.csv" using 1:(filter_neg($2)) with linespoints ls 32 title "iOS", \
   \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 1 notitle, \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.75 tc ls 31 notitle, \
-  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-0.95 tc ls 32 notitle
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$4/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 31 notitle, \
+  "<awk -F, '{if ( NR>1) {a=$2;c=b;b=$5/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0,-1.05 tc ls 32 notitle
   
