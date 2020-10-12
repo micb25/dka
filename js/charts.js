@@ -50,7 +50,7 @@ var plot_TRL_profile = {
             fontWeight: 'normal'
       },
       formatter: function(value, { seriesIndex, dataPointIndex, w }) {
-        return value + " (" + Math.round((value/TRL_sum_keys+Number.EPSILON)*1000)/10.0 + "%)";
+        return Math.round((value/TRL_sum_keys+Number.EPSILON)*1000)/10.0 + "%";
       },
       offsetY: -25
     },
