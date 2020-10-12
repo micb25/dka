@@ -17,9 +17,11 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/dka/assets/css/style.css">
     <style>
-     #TRLchart {
-      max-width: 800px;
-      max-width: 600px;
+     .apexPlot {
+        width: 800px;
+        height: 600px;
+        max-width: 95%;
+        max-height: 40%;
      }
     </style>
   </head>
@@ -75,65 +77,15 @@
          <img src="/dka/plots_de/plot_padding_multiplier.png" alt="" />
         </p>
         
-        <h2 id="TRL">Verteilung Transmission Risk Level (TRL) in Diagnoseschlüsseln</h2>
         <p>
-         <div id="TRLchart"></div>
+          <div class="apexPlot"><div id="TRLchart"></div></div>
         </p>
-        
+
         <script>
-         var options = {
-           chart: {
-             type: 'bar'
-           },
-           series: [{
-             name: 'Transmission Risk Level',
-             data: [0,0,0,0,0,0,0,0]
-           }],
-           xaxis: {
-             categories: [1,2,3,4,5,6,7,8]
-           },
-           yaxis: {
-             title: {
-               text: 'Verteilung der TRL in Diagnoseschlüsseln'
-             }
-           },
-           dataLabels: {
-             enabled: true,
-             style: {
-                   colors: ['#000000']
-             }
-           },
-           colors:['#72777e'],
-           title: {
-            text: "Transmission Risk Level"
-           },
-           plotOptions: {
-             bar: {
-               dataLabels: {
-                 position: 'top'
-               }
-             },
-             dataLabels: {
-               enabled: true,
-               style: {
-                   colors: ['#000000']
-               },
-               offsetX: 30
-             },
-           }
-         }
-         var chart = new ApexCharts(document.querySelector("#TRLchart"), options);
-         chart.render();
-         
-         var url = 'https://micb25.github.io/dka/data_CWA/transmission_risk_level_statistics.json';
-         $.getJSON(url, function(response) { TRL_profile = response[response.length-1][1]; 
-           chart.updateSeries([{
-             name: 'Transmission Risk Level',
-             data: TRL_profile
-           }])
-         });
+          var lang = 'DE';
         </script>
-        
+        <script src="./js/charts.js"></script>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>    
