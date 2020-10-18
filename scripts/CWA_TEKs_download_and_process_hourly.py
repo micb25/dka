@@ -185,7 +185,7 @@ if __name__ == "__main__":
             
             # analyse hourly packages
             if not os.path.isfile(fn_analysis):
-                os.system("../diagnosis-keys/parse_keys.py -m 5 -n -u -l -d {} > {}".format(fn_output, fn_analysis))
+                os.system("../diagnosis-keys/count_keys.py -a -m 5 -t -k -d {} > {}".format(fn_output, fn_analysis))
                 anonymize_TEKs(fn_analysis)
         
         data_list.append( [ timestamp, date_str, hourly_package_list_okay ] )
@@ -232,14 +232,16 @@ if __name__ == "__main__":
         
     pattern_num_keys = re.compile(r"Length: ([0-9]{1,}) keys")
     pattern_num_users = re.compile(r"([0-9]{1,}) user\(s\) found\.")
+    pattern_num_users_new = re.compile(r"user count: ([0-9]{1,})")
     pattern_num_subm = re.compile(r"([0-9]{1,}) user\(s\): ([0-9]{1,}) Diagnosis Key\(s\)")
     pattern_invalid_users = re.compile(r"([0-9]{1,}) user\(s\): Invalid Transmission Risk Profile")
+    pattern_padding_multiplier = re.compile(r"Padding multiplier is probably: ([0-9]{1,})")
     
     # initialization
     date_list = []
     trl_data = []
     trl_sum_data = [ 0, 0, 0, 0, 0, 0, 0, 0 ]
-    sum_keys = sum_users = sum_subbmited_keys = 0
+    sum_keys = sum_users = sum_submitted_keys = 0
     sum_invalid_profile_users = 0
     
     # add an empty entry as origin (2020-06-22)
@@ -254,8 +256,9 @@ if __name__ == "__main__":
             print("Error! Folder not found!")
             continue
             
-        num_keys = num_users = num_subbmited_keys = 0
+        num_keys = num_users = num_submitted_keys = 0
         num_invalid_profile_users = 0
+        num_pda  = 1
         
         for hour in hours:
             filename = filepath + date_str + "_" + str(hour) + ".dat"
@@ -286,10 +289,16 @@ if __name__ == "__main__":
             if ( len(pk) == 1 ):
                 num_keys += int(pk[0])
                 
-            # number of users who submitted keys
+            # number of users who submitted keys ( pre v1.5 )
             pu = pattern_num_users.findall(raw_data)
             if ( len(pu) == 1 ):
                 num_users += int(pu[0])
+            else:
+                # number of users ( since v1.5 )
+                pu = pattern_num_users_new.findall(raw_data)
+                if ( len(pu) >= 1 ):
+                    for r in pu:
+                        num_users += int(r)
                 
             # subtract invalid users
             pi = pattern_invalid_users.findall(raw_data)
@@ -297,24 +306,33 @@ if __name__ == "__main__":
                 num_invalid_profile_users += int(pi[0])
                 num_users -= int(pi[0])
                 
-            # number of submitted keys
+            # padding multiplier
+            pm = pattern_padding_multiplier.findall(raw_data)
+            if ( len(pm) == 1 ):
+                num_pda = int(pm[0])
+                
+            # number of submitted keys ( pre v1.5 )
             ps = pattern_num_subm.findall(raw_data)
-            if ( len(ps) > 0 ):
+            if ( len(ps) > 0 ) and (timestamp <= 1602806400):
                 for line in ps:
                     if ( len(line) == 2 ):
                         # workaround for strange hour=3 and key_length=1 users
+                        # this GENF bug was fixed
                         if (hour == 3) and int(line[1]) == 1:
                             num_users -= int(line[0])
                         else:
-                            num_subbmited_keys += int(line[0])*int(line[1])
-                
+                            num_submitted_keys += int(line[0])*int(line[1])
                 
         sum_keys += num_keys
         sum_users += num_users
-        sum_subbmited_keys += num_subbmited_keys
+        if (timestamp <= 1602806400):
+            sum_submitted_keys += num_submitted_keys
+        else:
+            num_submitted_keys = int(num_keys/num_pda) if num_pda > 0 else int(num_keys)
+            sum_submitted_keys += num_submitted_keys
         sum_invalid_profile_users += num_invalid_profile_users
                 
-        date_list.append([timestamp, num_keys, num_users, num_subbmited_keys, sum_keys, sum_users, sum_subbmited_keys, num_invalid_profile_users, sum_invalid_profile_users])
+        date_list.append([timestamp, num_keys, num_users, num_submitted_keys, sum_keys, sum_users, sum_submitted_keys, num_invalid_profile_users, sum_invalid_profile_users])
     
     # add TRL sums
     trl_data.append([0, trl_sum_data])
