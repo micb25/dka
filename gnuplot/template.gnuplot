@@ -41,8 +41,8 @@ set style increment default
 set style fill transparent solid 0.20 border
 
 # axes
-set xtics 4*86400 out nomirror rotate by 90 offset 0, -1.8 scale 1.2
-set mxtics 4
+set xtics 7*86400 out nomirror rotate by 90 offset 0, -1.8 scale 1.2
+set mxtics 7
 
 set format y '%6.0f'
 set ytics out nomirror scale 1.2
