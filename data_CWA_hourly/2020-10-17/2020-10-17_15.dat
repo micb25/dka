@@ -406,7 +406,9 @@ Revised Diagnosis Keys:
 
 
 Parsing the Diagnosis Key list...
-Length: 388 keys
+Length: 388 keys (77 without padding)
+WARNING: The number of keys is not a multiple of 5!
+See https://github.com/corona-warn-app/cwa-server/issues/693#issuecomment-672688610 for a possible explanation.
 Number of keys per TRL:
 Date:           1    2    3    4    5    6    7    8   Sum:
 2020-10-16:     0    0    0    0    0   33    0    0    33
@@ -424,6 +426,5 @@ Date:           1    2    3    4    5    6    7    8   Sum:
 2020-10-04:    30    0    0    0    0    0    0    0    30
 Total:        193    0   31    0   31   36    0   97   388
 
-Padding multiplier is probably: 5
 Pre-V1.5 user count:  8
 Post-V1.5 user count: 7
