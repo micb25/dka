@@ -58,9 +58,9 @@ if __name__ == "__main__":
                             # calculate multiplier
                             pm2 = pattern_mult_man.findall(package_data)
                             if ( len(pm2) != 1 ):
-                                continue
-                            
-                            pad_mult = int( int(pm2[0][0]) / int(pm2[0][1]) )
+                                pad_mult = 1
+                            else:
+                                pad_mult = int( int(pm2[0][0]) / int(pm2[0][1]) )
                             
                         else:
                             pad_mult = int(pm[0])

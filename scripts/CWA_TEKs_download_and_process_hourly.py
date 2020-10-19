@@ -185,7 +185,7 @@ if __name__ == "__main__":
             
             # analyse hourly packages
             if not os.path.isfile(fn_analysis):
-                os.system("../diagnosis-keys/count_keys.py -a -m 5 -t -k -d {} > {}".format(fn_output, fn_analysis))
+                os.system("../diagnosis-keys/count_keys.py -m 1 -t -k -d {} > {}".format(fn_output, fn_analysis))
                 anonymize_TEKs(fn_analysis)
         
         data_list.append( [ timestamp, date_str, hourly_package_list_okay ] )
@@ -232,7 +232,8 @@ if __name__ == "__main__":
         
     pattern_num_keys = re.compile(r"Length: ([0-9]{1,}) keys")
     pattern_num_users = re.compile(r"([0-9]{1,}) user\(s\) found\.")
-    pattern_num_users_new = re.compile(r"user count: ([0-9]{1,})")
+    # pattern_num_users_new = re.compile(r"Post-V1.5 user count:\s*([0-9]{1,})")
+    pattern_num_users_new = re.compile(r"Pre-V1.5 user count:\s*([0-9]{1,})")
     pattern_num_subm = re.compile(r"([0-9]{1,}) user\(s\): ([0-9]{1,}) Diagnosis Key\(s\)")
     pattern_invalid_users = re.compile(r"([0-9]{1,}) user\(s\): Invalid Transmission Risk Profile")
     pattern_padding_multiplier = re.compile(r"Padding multiplier is probably: ([0-9]{1,})")
@@ -263,8 +264,9 @@ if __name__ == "__main__":
         for hour in hours:
             filename = filepath + date_str + "_" + str(hour) + ".dat"
             if not os.path.isfile(filename):
-                print("Error! Hourly package analysis not found!")
-                continue
+                fn_output = filename = filepath + date_str + "_" + str(hour) + ".zip"
+                os.system("../diagnosis-keys/count_keys.py -m 1 -t -k -d {} > {}".format(fn_output, filename))
+                anonymize_TEKs(filename)
                 
             ###################################################################
             ##### Transmission Risk Levels (TRLs)
@@ -310,6 +312,8 @@ if __name__ == "__main__":
             pm = pattern_padding_multiplier.findall(raw_data)
             if ( len(pm) == 1 ):
                 num_pda = int(pm[0])
+            else:
+                num_pda = 1
                 
             # number of submitted keys ( pre v1.5 )
             ps = pattern_num_subm.findall(raw_data)
