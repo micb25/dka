@@ -232,7 +232,7 @@ if __name__ == "__main__":
         
     pattern_num_keys = re.compile(r"Length: ([0-9]{1,}) keys")
     pattern_num_users = re.compile(r"([0-9]{1,}) user\(s\) found\.")
-    # pattern_num_users_new = re.compile(r"Post-V1.5 user count:\s*([0-9]{1,})")
+    pattern_num_users_new_post = re.compile(r"Post-V1.5 user count:\s*([0-9]{1,})")
     pattern_num_users_new = re.compile(r"Pre-V1.5 user count:\s*([0-9]{1,})")
     pattern_num_subm = re.compile(r"([0-9]{1,}) user\(s\): ([0-9]{1,}) Diagnosis Key\(s\)")
     pattern_invalid_users = re.compile(r"([0-9]{1,}) user\(s\): Invalid Transmission Risk Profile")
@@ -297,7 +297,10 @@ if __name__ == "__main__":
                 num_users += int(pu[0])
             else:
                 # number of users ( since v1.5 )
-                pu = pattern_num_users_new.findall(raw_data)
+                if timestamp > 1603044000:
+                    pu = pattern_num_users_new_post.findall(raw_data)
+                else:
+                    pu = pattern_num_users_new.findall(raw_data)
                 if ( len(pu) >= 1 ):
                     for r in pu:
                         num_users += int(r)
