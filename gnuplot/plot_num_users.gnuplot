@@ -6,10 +6,6 @@ set output '../plots_de/plot_num_users.png'
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
 set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
 
-# stats for y
-stats "<awk -F, '{if ( NR > 1 ) print $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set yrange [ 0 : 10*(1+int(int(1.25*STATS_max)/10.0)) ]
-
 # x-axis setup
 unset xlabel
 set xdata time
