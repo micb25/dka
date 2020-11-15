@@ -36,9 +36,9 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold täglich positiv getes
 set label 2 at graph 0.50, 0.90 "{/*0.75 (Daten sind geschätzt; " . update_str . ")}" center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 2 notitle, \
-  \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.75, 0.45 tc ls 10 notitle
+  "<awk -F, '{if ( NR > 1 ) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 2 notitle
+#  \
+#  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.75, 0.45 tc ls 10 notitle
 
 ##################################### English
 
@@ -52,6 +52,6 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold positively tested peop
 set label 2 at graph 0.50, 0.90 "{/*0.75 (estimated values; " . update_str . ")}" center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 2 notitle, \
-  \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.75, 0.45 tc ls 10 notitle
+  "<awk -F, '{if ( NR > 1 ) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 2 notitle
+#  \
+#  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$3; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("{/*0.85 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.75, 0.45 tc ls 10 notitle
