@@ -6,10 +6,6 @@ set output '../plots_de/plot_keys.png'
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
 set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
 
-# stats for y
-stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set yrange [ 0 : 100*(1+int(int(1.25*STATS_max)/100.0)) ]
-
 # x-axis setup
 unset xlabel
 set xdata time
@@ -25,7 +21,7 @@ unset key
 set boxwidth 0.60*86400
 set style fill solid 1.00
 
-set offsets 0.00, 0.00, graph 0.15, 0.00
+set offsets 0.00, 0.00, graph 0.20, 0.00
 
 ##################################### German
 
@@ -37,9 +33,9 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (zur Erhöhung der Anonymität/Sicherhe
 set label 3 at graph 0.50, 0.85 update_str center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 1 notitle, \
-  \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i", $2)) with labels font ",8" rotate by 90 point ls 4 ps 0.0 center offset char  -0.55, 0.45 tc ls 10 notitle
+  "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 1 notitle
+#  \
+#  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i", $2)) with labels font ",8" rotate by 90 point ls 4 ps 0.0 center offset char  -0.55, 0.45 tc ls 10 notitle
 
 
 ##################################### English
@@ -55,6 +51,6 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (to increase anonymity/security, fictit
 set label 3 at graph 0.50, 0.85 update_str center textcolor ls 0
 
 plot  \
-  "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 1 notitle, \
-  \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i", $2)) with labels font ",8" rotate by 90 point ls 4 ps 0.0 center offset char  -0.55, 0.45 tc ls 10 notitle
+  "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 1 notitle
+#  \
+#  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2:(sprintf("%i", $2)) with labels font ",8" rotate by 90 point ls 4 ps 0.0 center offset char  -0.55, 0.45 tc ls 10 notitle
