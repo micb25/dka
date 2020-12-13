@@ -12,7 +12,7 @@ An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [
 
 ## Diagrams 
 ### Usage of the Corona-Warn-App ([RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html))
-downloads                                  | issued teleTANs
+downloads                                  | issued teleTANs (outdated)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_teleTANs.png) 
 
