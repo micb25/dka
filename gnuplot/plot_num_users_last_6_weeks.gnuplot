@@ -1,5 +1,8 @@
 load "template.gnuplot"
 
+set xtics 7*86400 out nomirror rotate by 90 offset 0, -1.8 scale 1.2
+set mxtics 7
+
 set output '../plots_de/plot_num_users_last_6_weeks.png'
 
 # stats for x
