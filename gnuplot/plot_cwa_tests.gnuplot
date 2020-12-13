@@ -17,7 +17,7 @@ set timefmt "%s"
 set format x "%d.%m."
 
 # y-axis setup
-set ylabel "übermittelte Testergebnisse (in Millionen)"
+unset ylabel
 
 # key
 set key at graph 0.33, 0.20 spacing 1.2 
@@ -51,8 +51,6 @@ set output '../plots_en/plot_cwa_tests.png'
 
 date_cmd_en = sprintf("%s", "`awk -F, '{print "@"($2+7200)}' ../data_RKI/cwa_statistics_tests.csv | tail -n 1 | xargs date +"%d/%m/%Y" -d`")
 update_str = "{/*0.75 last update: " . date_cmd_en . "}"
-
-set ylabel "delivered test results (in millions)"
 
 set label 1 at graph 0.98, 0.10 update_str right textcolor ls 0
 set label 2 at graph 0.98, 0.05 "{/*0.75 source: Robert Koch Institute and CWA website}" right textcolor ls 0
