@@ -55,20 +55,3 @@ Täglich                                    |  Summe
 Summe                                      |    
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_de/plot_TRL_histogram.png)       | ![](plots_de/plot_empty.png)
-
-
-## Erläuterungen
-
-### Transmission Risk Level
-Entscheidet sich eine Person im Falle einer positiven Testung zur Übertragung seiner Tagesschlüssel (max. 13 Stück), so wird diesen ein variierender Wert für das Übertragungsrisiko hinzugefügt (Wertebereich: 1-8; engl. Transmission Risk Level), welches dem folgenden Schema folgt und vom Robert Koch-Institut festgelegt wurde. Je höher der entsprechende Wert ist, desto höher wird ein entsprechendes Infektionsrisiko bei einem Kontakt angenommen. Zur Verbesserung der Anonymität enthalten die täglichen Pakete mit gemeldeten Diagnoseschlüssel, auch eine große Zahl fingierter Schlüssel. Die Anzahl an Personen, welche ihre Tagesschlüssel geteilt haben um die Kontaktpersonen zu warnen, kann aber mit Hilfe dieses speziellen Schemas [abgeschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md) werden.
-
-Tage seit Meldung        | Übermittelter TRL-Wert | Kommentar
-:-----------------------:|:----------------------:|:------------------:
-0                        | 5                      | wird nicht übermittelt
-1                        | 6
-2                        | 8
-3                        | 8
-4                        | 8
-5                        | 5
-6                        | 3
-7-13                     | 1
