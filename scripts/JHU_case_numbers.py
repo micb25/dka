@@ -42,25 +42,26 @@ if __name__ == "__main__":
     DATAFILE = os.path.dirname(os.path.realpath(__file__)) + "/../data_JHU/cases_germany_jhu.csv"
     URL_BASE = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
     
-    yesterday_str = (datetime.datetime.today() - datetime.timedelta(days=1)).strftime("%m-%d-%Y")
-    today_url = URL_BASE + yesterday_str + ".csv"
+    for day_delta in range(7, 0, -1):
     
-    data = getJHUDataForGermany(today_url)
-    
-    if data == False:
-        print("Error! No JHU data for today available yet.")
-        sys.exit(1)
-      
-    with open(DATAFILE, "r") as df:
-        last_jhu_data = df.read().splitlines()[-1].split(",")
+        date_str = (datetime.datetime.today() - datetime.timedelta(days=day_delta)).strftime("%m-%d-%Y")
+        today_url = URL_BASE + date_str + ".csv"
         
-    if ( len(last_jhu_data) < 3 ):
-        print("Error! No or invalid data in CSV file!")
-        sys.exit(1)
+        data = getJHUDataForGermany(today_url)
         
-    last_update, last_cases, last_deceased = [ int(last_jhu_data[0]), int(last_jhu_data[1]), int(last_jhu_data[3]) ]
-         
-    if ( data[0] > last_update ):
-        f = open(DATAFILE, 'a')
-        f.write("{},{},{},{},{}\n".format(data[0], data[1], data[1] - last_cases, data[2], data[2] - last_deceased) )
-        f.close()
+        if data == False:
+            continue
+          
+        with open(DATAFILE, "r") as df:
+            last_jhu_data = df.read().splitlines()[-1].split(",")
+            
+        if ( len(last_jhu_data) < 3 ):
+            print("Error! No or invalid data in CSV file!")
+            sys.exit(1)
+            
+        last_update, last_cases, last_deceased = [ int(last_jhu_data[0]), int(last_jhu_data[1]), int(last_jhu_data[3]) ]
+                
+        if ( data[0] > last_update ):
+            f = open(DATAFILE, 'a')
+            f.write("{},{},{},{},{}\n".format(data[0], data[1], data[1] - last_cases, data[2], data[2] - last_deceased) )
+            f.close()
