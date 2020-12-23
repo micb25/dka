@@ -22,7 +22,7 @@ unset ylabel
 # key
 set key at graph 0.33, 0.20 spacing 1.2 
 
-set offsets 0.00, graph 0.02, graph 0.20, 0.00
+set offsets 0.00, graph 0.02, graph 0.25, 0.00
 
 # date
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($2+7200)}' ../data_RKI/cwa_statistics_tests.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
@@ -42,7 +42,7 @@ set label 4 at graph 0.50, 0.88 "{/Linux-Libertine-O-Bold übermittelter Testerg
 plot  \
   "<awk -F, '{if ((NR>1)&&($3>=0)) print $2, $3/1000000}' ../data_RKI/cwa_statistics_tests.csv" using 1:(filter_neg($2)) with linespoints ls 1 notitle, \
   \
-  "<awk -F, '{if ((NR>1)&&($3>0)) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics_tests.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle
+  "<awk -F, '{if ((NR>1)&&($3>0)) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics_tests.csv" using 1:2:(sprintf("%.2f (%+.2f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle
 
 ##################################### English
   
@@ -61,4 +61,4 @@ set label 4 at graph 0.50, 0.88 "{/Linux-Libertine-O-Bold delivered with Corona-
 plot  \
   "<awk -F, '{if ((NR>1)&&($3>=0)) print $2, $3/1000000}' ../data_RKI/cwa_statistics_tests.csv" using 1:(filter_neg($2)) with linespoints ls 1 notitle, \
   \
-  "<awk -F, '{if ((NR>1)&&($3>0)) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics_tests.csv" using 1:2:(sprintf("%.1f (%+.1f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle
+  "<awk -F, '{if ((NR>1)&&($3>0)) {a=$2;c=b;b=$3/1000000}}END{print a, b, b-c}' ../data_RKI/cwa_statistics_tests.csv" using 1:2:(sprintf("%.2f (%+.2f)", $2, $3)) with labels point ls 17 ps 0.0 right offset char  0.0, 0.85 tc ls 1 notitle
