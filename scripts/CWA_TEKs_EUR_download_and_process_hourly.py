@@ -3,7 +3,7 @@
 import json, datetime, requests, re, os, sys
 
 
-def getCWADateList(data_dir, country="DE"):
+def getCWADateList(data_dir, country="EUR"):
     DOWNLOAD_URL = "https://svc90.main.px.t-online.de/version/v1/diagnosis-keys/country/{}/date".format(country)
     DATAFILE = data_dir + "/date.json"
     
@@ -22,7 +22,7 @@ def getCWADateList(data_dir, country="DE"):
         return False
     
 
-def getCWAHourlyDataList(data_dir, datestr, datafile, country="DE"):
+def getCWAHourlyDataList(data_dir, datestr, datafile, country="EUR"):
     DOWNLOAD_URL = "https://svc90.main.px.t-online.de/version/v1/diagnosis-keys/country/{}/date/".format(country) + datestr + "/hour"
     
     if os.path.isfile(datafile):
@@ -43,7 +43,7 @@ def getCWAHourlyDataList(data_dir, datestr, datafile, country="DE"):
         return False
    
 
-def getCWAHourlyPackage(data_dir, datestr, hour, output, country="DE"):
+def getCWAHourlyPackage(data_dir, datestr, hour, output, country="EUR"):
     DOWNLOAD_URL = "https://svc90.main.px.t-online.de/version/v1/diagnosis-keys/country/{}/date/".format(country) + datestr + "/hour/" + str(hour)
     
     try:
@@ -99,8 +99,8 @@ if __name__ == "__main__":
     ###########################################################################
     ##### Paths and filenames
     ###########################################################################
-    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA_hourly/"
-    MAIN_DATA_DIR = os.path.dirname(os.path.realpath(__file__)) + "/../data_CWA/"
+    DATA_DIR  = os.path.dirname(os.path.realpath(__file__)) + "/../data_EUR_CWA_hourly/"
+    MAIN_DATA_DIR = os.path.dirname(os.path.realpath(__file__)) + "/../data_EUR_CWA/"
     
     DKS_CSV_FILE  = MAIN_DATA_DIR + "diagnosis_keys_statistics.csv"
     DKS_JSON_FILE = MAIN_DATA_DIR + "diagnosis_keys_statistics.json"
