@@ -5,8 +5,13 @@ import datetime, json, os, sys
 
 def timestampToWeekNum(ts):
     try:
-        week_num = int(datetime.datetime.utcfromtimestamp(ts).strftime("%W")) + 1
         year     = int(datetime.datetime.utcfromtimestamp(ts).strftime("%Y"))
+        week_num = int(datetime.datetime.utcfromtimestamp(ts).strftime("%V"))
+        month    = int(datetime.datetime.utcfromtimestamp(ts).strftime("%m"))
+        
+        if week_num >= 52 and month == 1:
+            year -= 1
+        
         return [week_num, year]
     except:
         return False
