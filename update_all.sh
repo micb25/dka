@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# update stats
+cd data_CWA/stats_scripts/
+./cwa_parse_stats.py > /dev/null
+cd ../../
+
 # update data
 cd scripts 
 ./RKI_case_numbers.py > /dev/null
