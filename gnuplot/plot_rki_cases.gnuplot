@@ -5,10 +5,7 @@ set output '../plots_de/plot_rki_cases.png'
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
 set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
-
-# stats for y
-stats "<awk -F, '{if ( $1 >= 1592784000 ) print $3}' ../data_RKI/cases_germany_rki.csv" using 1 nooutput
-set yrange [ 0 : 10*(1+int(int(1.25*STATS_max)/10.0)) ]
+set yrange [ 0 : * ]
 
 # x-axis setup
 unset xlabel
@@ -35,7 +32,8 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold täglich an das RKI ge
 set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 
 plot \
-  "<awk -F, '{if ( NR > 1 ) print $1+7200, $3}' ../data_RKI/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle
+  "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1+7200, $3}' ../data_RKI/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle, \
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1+7200, $3}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 7 notitle
 
 ##################################### English
 set format x "%d/%m"
@@ -48,4 +46,5 @@ set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold new daily COVID-19 inf
 set label 2 at graph 0.50, 0.90 update_str center textcolor ls 0
 
 plot \
-  "<awk -F, '{if ( NR > 1 ) print $1+7200, $3}' ../data_RKI/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle
+  "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1+7200, $3}' ../data_RKI/cases_germany_rki.csv" using 1:2 with boxes ls 7 notitle, \
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1+7200, $3}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 7 notitle
