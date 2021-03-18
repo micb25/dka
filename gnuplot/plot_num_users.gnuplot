@@ -44,7 +44,7 @@ date_cmd_en = sprintf("%s", "`awk -F, '{print "@"($1)}' ../data_CWA/diagnosis_ke
 update_str = "last update: " . date_cmd_en . "; source: Corona-Warn-App"
 
 set label 1 at graph 0.50, 0.95 "{/Linux-Libertine-O-Bold positively tested people per day sharing their diagnosis keys}" center textcolor ls 0
-set label 2 at graph 0.50, 0.90 "{/*0.75 (estimated values; " . update_str . ")}" center textcolor ls 0
+set label 2 at graph 0.50, 0.90 "{/*0.75 (CWA statistical data + estimated values; " . update_str . ")}" center textcolor ls 0
 
 plot  \
   "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 5 title "estimated values", \
