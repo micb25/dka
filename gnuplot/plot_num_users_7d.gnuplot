@@ -35,7 +35,7 @@ set label 3 at graph 0.50, 0.83 "{/*0.75 (CWA-Statistikdaten + geschätzte Daten
 plot  \
   "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if ((NR>1)&&($1<1611964800)) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 5 title "geschätzte Daten", \
   \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $4/7.0}' ../data_CWA/cwa_stats_data.csv" using 1:(filter_neg($2)) with linespoints ls 5 pt 9 lc "#B00000" title "CWA-Statistikdaten"
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $4/7.0}' ../data_CWA/cwa_stats_data.csv" using 1:(filter_neg($2)) with linespoints ls 50 title "CWA-Statistikdaten"
 
 ##################################### English
 
@@ -52,5 +52,5 @@ set label 3 at graph 0.50, 0.83 "{/*0.75 (CWA statistical data + estimated value
 plot  \
   "<awk -F, 'BEGIN{for(i=0;i<7;i++){a[i]=0}} { if ((NR>1)&&($1<1611964800)) {for(i=0; i<6; i++){a[i]=a[i+1]};a[6]=$3;b=0;for(i=0;i<7; i++){b=b+a[i]};print $1,b/7}}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 5 title "estimated values", \
   \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $4/7.0}' ../data_CWA/cwa_stats_data.csv" using 1:(filter_neg($2)) with linespoints ls 5 pt 9 lc "#B00000" title "CWA statistical data"
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $4/7.0}' ../data_CWA/cwa_stats_data.csv" using 1:(filter_neg($2)) with linespoints ls 50 title "CWA statistical data"
   

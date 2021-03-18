@@ -30,9 +30,9 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (CWA-Statistikdaten + geschätzte Daten
 
 plot  \
   "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1, $6}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 5 title "geschätzte Daten", \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $6}' ../data_CWA/cwa_stats_data.csv" using 1:2 with linespoints ls 5 pt 9 lc "#B00000" title "CWA-Statistikdaten", \
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $6}' ../data_CWA/cwa_stats_data.csv" using 1:2 with linespoints ls 50 title "CWA-Statistikdaten", \
   \
-  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$6}}END{print a, b, b-c}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc "#B00000" notitle
+  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$6}}END{print a, b, b-c}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc "#FF0000" notitle
 
 ##################################### English
 
@@ -47,7 +47,7 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (CWA statistical data + estimated value
 
 plot  \
   "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1, $6}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with linespoints ls 5 title "estimated values", \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $6}' ../data_CWA/cwa_stats_data.csv" using 1:2 with linespoints ls 5 pt 9 lc "#B00000" title "CWA statistical data", \
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $6}' ../data_CWA/cwa_stats_data.csv" using 1:2 with linespoints ls 50 title "CWA statistical data", \
   \
-  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$6}}END{print a, b, b-c}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc "#B00000" notitle
+  "<awk -F, '{if ( NR>1) {a=$1;c=b;b=$6}}END{print a, b, b-c}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("%i (%+i)", $2, $3)) with labels point ls 2 ps 0.0 right offset char 0.0, 0.75 tc "#FF0000" notitle
   

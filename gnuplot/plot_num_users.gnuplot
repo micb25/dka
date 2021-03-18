@@ -33,7 +33,7 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (CWA-Statistikdaten + geschätzte Daten
 
 plot  \
   "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 5 title "geschätzte Daten", \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 5 lc "#B00000" title "CWA-Statistikdaten"
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 50 title "CWA-Statistikdaten"
 
 ##################################### English
 
@@ -48,4 +48,4 @@ set label 2 at graph 0.50, 0.90 "{/*0.75 (estimated values; " . update_str . ")}
 
 plot  \
   "<awk -F, '{if ((NR>1)&&($1<1611964800)) print $1, $3}' ../data_CWA/diagnosis_keys_statistics.csv" using 1:2 with boxes ls 5 title "estimated values", \
-  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 5 lc "#B00000" title "CWA statistical data"
+  "<awk -F, '{if ((NR>1)&&($1>=1611964800)) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 50 title "CWA statistical data"
