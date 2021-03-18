@@ -1,0 +1,53 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-02-26/2021-02-26_4.zip' read.
+- Time window: 2021-02-26 04:00:00 UTC - 2021-02-26 05:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 13
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 03ab38fbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-23 00:00:00 UTC - 2021-02-24 00:00:00 UTC (2690064, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    2: TEK: 3ef09577XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-20 00:00:00 UTC - 2021-02-21 00:00:00 UTC (2689632, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+    3: TEK: 4aba1e71XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-18 00:00:00 UTC - 2021-02-19 00:00:00 UTC (2689344, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    4: TEK: 52ab89efXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-21 00:00:00 UTC - 2021-02-22 00:00:00 UTC (2689776, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+    5: TEK: 59bf5778XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-25 00:00:00 UTC - 2021-02-26 00:00:00 UTC (2690352, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    6: TEK: 7c8b67daXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-15 00:00:00 UTC - 2021-02-16 00:00:00 UTC (2688912, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    7: TEK: 8acaab46XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-17 00:00:00 UTC - 2021-02-18 00:00:00 UTC (2689200, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    8: TEK: abc93044XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-19 00:00:00 UTC - 2021-02-20 00:00:00 UTC (2689488, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+    9: TEK: af31d1dbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-24 00:00:00 UTC - 2021-02-25 00:00:00 UTC (2690208, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   10: TEK: b416da97XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-16 00:00:00 UTC - 2021-02-17 00:00:00 UTC (2689056, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   11: TEK: e60b4ff3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-13 00:00:00 UTC - 2021-02-14 00:00:00 UTC (2688624, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   12: TEK: ee6afa1cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-22 00:00:00 UTC - 2021-02-23 00:00:00 UTC (2689920, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   13: TEK: eea933a0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-14 00:00:00 UTC - 2021-02-15 00:00:00 UTC (2688768, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 13 keys (13 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-02-25:    0   0   0   0   0   0   0   1    1
+2021-02-24:    0   0   0   0   0   0   0   1    1
+2021-02-23:    0   0   0   0   0   0   0   1    1
+2021-02-22:    0   0   0   0   0   0   1   0    1
+2021-02-21:    0   0   0   0   0   1   0   0    1
+2021-02-20:    0   0   0   1   0   0   0   0    1
+2021-02-19:    0   1   0   0   0   0   0   0    1
+2021-02-18:    1   0   0   0   0   0   0   0    1
+2021-02-17:    1   0   0   0   0   0   0   0    1
+2021-02-16:    1   0   0   0   0   0   0   0    1
+2021-02-15:    1   0   0   0   0   0   0   0    1
+2021-02-14:    1   0   0   0   0   0   0   0    1
+2021-02-13:    1   0   0   0   0   0   0   0    1
+Total:         6   1   0   1   0   1   1   3   13
+
+Pre-V1.5 user count:  1
+Post-V1.5 user count: 1

@@ -1,0 +1,51 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-03-04/2021-03-04_0.zip' read.
+- Time window: 2021-03-04 00:00:00 UTC - 2021-03-04 01:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 12
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 05f32cbdXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-26 00:00:00 UTC - 2021-02-27 00:00:00 UTC (2690496, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+    2: TEK: 2abb8cf7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-03-02 00:00:00 UTC - 2021-03-03 00:00:00 UTC (2691072, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    3: TEK: 5bb84a7eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-25 00:00:00 UTC - 2021-02-26 00:00:00 UTC (2690352, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+    4: TEK: 67502b4cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-20 00:00:00 UTC - 2021-02-21 00:00:00 UTC (2689632, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    5: TEK: 84180113XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-24 00:00:00 UTC - 2021-02-25 00:00:00 UTC (2690208, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+    6: TEK: 86ee375bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-28 00:00:00 UTC - 2021-03-01 00:00:00 UTC (2690784, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    7: TEK: a0e6ef81XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-19 00:00:00 UTC - 2021-02-20 00:00:00 UTC (2689488, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    8: TEK: b45e7a2aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-21 00:00:00 UTC - 2021-02-22 00:00:00 UTC (2689776, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    9: TEK: be409652XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-22 00:00:00 UTC - 2021-02-23 00:00:00 UTC (2689920, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   10: TEK: ed882f71XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-27 00:00:00 UTC - 2021-02-28 00:00:00 UTC (2690640, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   11: TEK: f7106f28XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-23 00:00:00 UTC - 2021-02-24 00:00:00 UTC (2690064, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+   12: TEK: fa87e76aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-03-01 00:00:00 UTC - 2021-03-02 00:00:00 UTC (2690928, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 12 keys (12 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-03-02:    0   0   0   0   0   0   0   1    1
+2021-03-01:    0   0   0   0   0   0   0   1    1
+2021-02-28:    0   0   0   0   0   0   0   1    1
+2021-02-27:    0   0   0   0   0   0   0   1    1
+2021-02-26:    0   0   0   0   0   0   1   0    1
+2021-02-25:    0   0   0   0   0   1   0   0    1
+2021-02-24:    0   0   0   1   0   0   0   0    1
+2021-02-23:    0   1   0   0   0   0   0   0    1
+2021-02-22:    1   0   0   0   0   0   0   0    1
+2021-02-21:    1   0   0   0   0   0   0   0    1
+2021-02-20:    1   0   0   0   0   0   0   0    1
+2021-02-19:    1   0   0   0   0   0   0   0    1
+Total:         4   1   0   1   0   1   1   4   12
+
+Pre-V1.5 user count:  1
+Post-V1.5 user count: 1

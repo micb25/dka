@@ -1,0 +1,36 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-03-01/2021-03-01_2.zip' read.
+- Time window: 2021-03-01 02:00:00 UTC - 2021-03-01 03:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 6
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 1bed04f0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-26 00:00:00 UTC - 2021-02-27 00:00:00 UTC (2690496, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    2: TEK: 98090e29XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-27 00:00:00 UTC - 2021-02-28 00:00:00 UTC (2690640, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    3: TEK: b07e8adbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-27 00:00:00 UTC - 2021-02-28 00:00:00 UTC (2690640, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    4: TEK: d081ff05XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-27 00:00:00 UTC - 2021-02-28 00:00:00 UTC (2690640, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    5: TEK: edfcd258XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-27 00:00:00 UTC - 2021-02-28 00:00:00 UTC (2690640, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    6: TEK: f5c0bd0eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-28 00:00:00 UTC - 2021-03-01 00:00:00 UTC (2690784, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 6 keys (6 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-02-28:    0   0   0   0   0   0   0   1    1
+2021-02-27:    0   0   0   0   0   0   0   4    4
+2021-02-26:    0   0   0   0   0   0   0   1    1
+Total:         0   0   0   0   0   0   0   6    6
+
+Pre-V1.5 user count:  0
+Post-V1.5 user count: 1

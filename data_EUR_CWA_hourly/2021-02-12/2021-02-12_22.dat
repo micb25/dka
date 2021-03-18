@@ -1,0 +1,435 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-02-12/2021-02-12_22.zip' read.
+- Time window: 2021-02-12 22:00:00 UTC - 2021-02-12 23:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 393
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 01eac31eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+    2: TEK: 020c8d76XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    3: TEK: 02273f1dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+    4: TEK: 04090c1aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+    5: TEK: 05c4eccfXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+    6: TEK: 065d04b3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-30 00:00:00 UTC - 2021-01-30 11:20:00 UTC (2686608, 68), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+    7: TEK: 069f45a5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+    8: TEK: 0750d6a8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+    9: TEK: 08fa5f65XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   10: TEK: 08fb7006XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   11: TEK: 0923b672XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+   12: TEK: 09ab94a8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   13: TEK: 09d01f90XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   14: TEK: 0a6f9060XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   15: TEK: 0ab35920XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   16: TEK: 0b7430edXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   17: TEK: 0bdbafffXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   18: TEK: 0c22d419XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   19: TEK: 0c622d60XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   20: TEK: 0c94404eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   21: TEK: 0cb797feXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   22: TEK: 0dcd20faXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   23: TEK: 0e689ee0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-01 00:00:00 UTC - 2021-02-01 17:30:00 UTC (2686896, 105), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   24: TEK: 0e91ee7cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   25: TEK: 0e9a909aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   26: TEK: 0eddda46XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   27: TEK: 0f036656XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   28: TEK: 110b0b9bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   29: TEK: 114ccbb6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   30: TEK: 119da026XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   31: TEK: 11ed2e16XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   32: TEK: 131e01c6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   33: TEK: 161eac96XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   34: TEK: 1658d10eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   35: TEK: 17241f4cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   36: TEK: 174d2dd0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   37: TEK: 1832dab0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   38: TEK: 185c39d8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   39: TEK: 18fec697XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   40: TEK: 1955a475XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   41: TEK: 1a5b22f5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   42: TEK: 1b79d479XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   43: TEK: 1c1ed988XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   44: TEK: 1cca67adXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   45: TEK: 1d02e395XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   46: TEK: 1e04575eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   47: TEK: 1e3ddf69XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   48: TEK: 1e96d54cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   49: TEK: 1ece9b0aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   50: TEK: 1f7bb50dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   51: TEK: 1f858ddcXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   52: TEK: 2002aa22XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   53: TEK: 20262e86XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   54: TEK: 20a1adc9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   55: TEK: 20b45d77XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   56: TEK: 231d27feXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   57: TEK: 23e706d0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+   58: TEK: 24ae59f6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   59: TEK: 2583b251XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   60: TEK: 261a7dadXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   61: TEK: 2662dd0fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   62: TEK: 274fe9ccXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   63: TEK: 27eabbe6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   64: TEK: 28452f0fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   65: TEK: 28527dffXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   66: TEK: 28b872e4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   67: TEK: 2928a5b6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   68: TEK: 293d3092XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   69: TEK: 29fa271aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: RECURSIVE, Days since onset of symptoms: 2
+   70: TEK: 2a34017aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   71: TEK: 2b141315XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   72: TEK: 2b4aa810XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   73: TEK: 2b6bd4daXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   74: TEK: 2c147fb1XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   75: TEK: 2c4b75e6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   76: TEK: 2c673550XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   77: TEK: 2d3455ecXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   78: TEK: 2d39d9d9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   79: TEK: 2d4a9794XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   80: TEK: 2fa0ce6eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   81: TEK: 2fd5b25fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   82: TEK: 304db4ffXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   83: TEK: 3070dfc9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   84: TEK: 30ff7967XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   85: TEK: 33a4b2baXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   86: TEK: 34c18de5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   87: TEK: 34f33ec7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   88: TEK: 35458092XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   89: TEK: 379167d8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   90: TEK: 37f5d00fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   91: TEK: 382e076cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   92: TEK: 38edd5f1XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+   93: TEK: 394d0030XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   94: TEK: 39618e96XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+   95: TEK: 39a512b2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   96: TEK: 3a403f53XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   97: TEK: 3b17d04bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   98: TEK: 3b59cef8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+   99: TEK: 3b807a23XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  100: TEK: 3b9c35d8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  101: TEK: 3cdbf468XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  102: TEK: 3d733768XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  103: TEK: 3da2b556XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  104: TEK: 3df13f2bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  105: TEK: 3e9cbd54XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  106: TEK: 3eae00b0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  107: TEK: 3f23d29bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  108: TEK: 3f521757XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  109: TEK: 3f98170aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  110: TEK: 3fafc320XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  111: TEK: 40653a72XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  112: TEK: 41412699XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  113: TEK: 41cdbc1cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  114: TEK: 437fbdb6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  115: TEK: 461afeeaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  116: TEK: 482b29e3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  117: TEK: 48414b72XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  118: TEK: 489088daXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  119: TEK: 4983c165XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  120: TEK: 4ac6daf8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  121: TEK: 4cab7f5dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  122: TEK: 4d863b6bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  123: TEK: 4e5bd4b4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  124: TEK: 4ef2925bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  125: TEK: 4f1a3350XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  126: TEK: 4f85b26dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  127: TEK: 4fbfe88cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  128: TEK: 4fc8ce28XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  129: TEK: 50926ac9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  130: TEK: 50bffc59XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  131: TEK: 515fe49eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  132: TEK: 5284b526XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  133: TEK: 55edb13dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  134: TEK: 5631ebecXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  135: TEK: 56a1bb74XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  136: TEK: 57261f5eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  137: TEK: 58986234XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  138: TEK: 5968827dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  139: TEK: 59cd769eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  140: TEK: 5a1fcfafXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  141: TEK: 5aeb3d5eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  142: TEK: 5b73783eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  143: TEK: 5b8e3a0cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  144: TEK: 5c8acb39XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  145: TEK: 5d78d3a2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  146: TEK: 5e987a7bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  147: TEK: 5ea713ddXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  148: TEK: 5ebaf6eaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  149: TEK: 5f4551cfXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  150: TEK: 60a65004XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  151: TEK: 6275001eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  152: TEK: 63a668ceXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  153: TEK: 63e4bbf4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  154: TEK: 648f2f50XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  155: TEK: 64b6f7beXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  156: TEK: 65cc7c97XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  157: TEK: 68a82d37XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  158: TEK: 68bebe34XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  159: TEK: 69ca925cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  160: TEK: 6ab4faa8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  161: TEK: 6ae80f01XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  162: TEK: 6b9f1f25XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  163: TEK: 6eae0882XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  164: TEK: 6f345c7bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  165: TEK: 710acdb3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  166: TEK: 720f1456XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  167: TEK: 72a5a87aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  168: TEK: 735eb8efXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  169: TEK: 73cc7832XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  170: TEK: 73f3f43dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  171: TEK: 740855edXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  172: TEK: 7421bbbdXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  173: TEK: 74da95b7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  174: TEK: 751bb88dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  175: TEK: 76298902XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  176: TEK: 76365ebbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  177: TEK: 767a9674XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  178: TEK: 77012a70XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  179: TEK: 7926d0c4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  180: TEK: 7933c867XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  181: TEK: 7955b203XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  182: TEK: 79df85f2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  183: TEK: 7ae989e6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  184: TEK: 7bef6760XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  185: TEK: 7c372619XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  186: TEK: 7c432c8eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  187: TEK: 7cb701c9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  188: TEK: 7d0b2c41XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  189: TEK: 7d24d54aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-30 00:00:00 UTC - 2021-01-30 16:50:00 UTC (2686608, 101), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  190: TEK: 7dfc1f9aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  191: TEK: 7e07faefXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  192: TEK: 7f2390dbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  193: TEK: 7f4beec5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  194: TEK: 7ff6053dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  195: TEK: 8049eb81XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  196: TEK: 8058478cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  197: TEK: 80c60381XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  198: TEK: 82ad502aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  199: TEK: 838be195XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  200: TEK: 8606a864XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  201: TEK: 86621702XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  202: TEK: 874b5609XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  203: TEK: 877c5c73XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  204: TEK: 87abdfe6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  205: TEK: 8815632bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  206: TEK: 88280edeXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  207: TEK: 88327cf8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  208: TEK: 89e27e77XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  209: TEK: 8a1adbaaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  210: TEK: 8a31e4f2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  211: TEK: 8b0b21feXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  212: TEK: 8ba56651XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  213: TEK: 8bd402dbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  214: TEK: 8c709db6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  215: TEK: 8c9c3cd9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  216: TEK: 8cfa213dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  217: TEK: 8d1bb87eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  218: TEK: 8d8769c5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  219: TEK: 8df2c3e2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  220: TEK: 8e0149a8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  221: TEK: 8e94f009XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  222: TEK: 8ef49c92XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  223: TEK: 8f339d2eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  224: TEK: 8fb1056dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  225: TEK: 90947f74XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  226: TEK: 917e708aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  227: TEK: 91d39ba7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  228: TEK: 92eaacfbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  229: TEK: 92ee3a9aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  230: TEK: 92f2e3c1XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  231: TEK: 94095301XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  232: TEK: 967e230bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  233: TEK: 96d783b4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  234: TEK: 970fe3d0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  235: TEK: 98db3faeXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  236: TEK: 994730ceXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  237: TEK: 995f7bf9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  238: TEK: 9a3016e6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  239: TEK: 9b2e0044XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  240: TEK: 9b5f6553XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  241: TEK: 9ceb9896XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  242: TEK: 9d7082d2XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  243: TEK: 9d81df39XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  244: TEK: 9e500c64XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  245: TEK: 9f4cfd48XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  246: TEK: 9fe7ee80XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  247: TEK: a007a7d5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  248: TEK: a05230d4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  249: TEK: a158dd11XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  250: TEK: a192b8e0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  251: TEK: a2a35b63XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  252: TEK: a2c50b65XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  253: TEK: a2d4b79dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  254: TEK: a3a0437aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  255: TEK: a47c2cf4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  256: TEK: a5a31866XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  257: TEK: a77def8aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  258: TEK: a78c3864XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  259: TEK: a7ce4b03XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  260: TEK: a80b8b17XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  261: TEK: a8171a81XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  262: TEK: a97c9e09XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  263: TEK: aa1225feXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  264: TEK: aa23c1b3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  265: TEK: aab0d588XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  266: TEK: aabe0c2cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  267: TEK: ab074645XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  268: TEK: ac705117XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  269: TEK: ad03b3eaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  270: TEK: adbca304XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  271: TEK: aea4a55aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  272: TEK: af4e3de3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  273: TEK: aff185cfXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  274: TEK: b0d6a793XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  275: TEK: b177ab74XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  276: TEK: b2a0c2c1XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  277: TEK: b2a97296XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  278: TEK: b2f930d7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  279: TEK: b46e4e64XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-11 00:00:00 UTC - 2021-02-11 07:30:00 UTC (2688336, 45), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  280: TEK: b4f60e8aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  281: TEK: b53fe999XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  282: TEK: b5a59d86XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  283: TEK: b5c19090XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  284: TEK: b5f84339XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  285: TEK: b664b91aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  286: TEK: b69f950dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  287: TEK: b8096161XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  288: TEK: ba20d343XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  289: TEK: ba33d324XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  290: TEK: babaa916XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  291: TEK: bb2e7bc4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  292: TEK: bbbb5f0cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:00:00 UTC (2688480, 114), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  293: TEK: bbc1edccXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  294: TEK: bc722791XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  295: TEK: bd0fe113XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-30 00:00:00 UTC - 2021-01-31 00:00:00 UTC (2686608, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  296: TEK: bf4d30a0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  297: TEK: c02c3a03XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  298: TEK: c07b22d7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  299: TEK: c27f19cdXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  300: TEK: c2c94a72XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  301: TEK: c334371cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  302: TEK: c369380dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  303: TEK: c3a2ac41XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  304: TEK: c3a82b79XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  305: TEK: c4b05c21XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  306: TEK: c4b86e87XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  307: TEK: c5db1c27XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  308: TEK: c60673ccXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  309: TEK: c608b01dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  310: TEK: c64e78c5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  311: TEK: c7cf4eefXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  312: TEK: c841d531XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  313: TEK: c8ebcb03XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  314: TEK: c8ecbef8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:10:00 UTC (2688480, 115), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  315: TEK: c97e17dbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  316: TEK: ca1d7c5fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  317: TEK: ca6da7aaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  318: TEK: ca91ad15XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  319: TEK: cc732874XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  320: TEK: cd3937b0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  321: TEK: cd9afdd8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  322: TEK: ce67cc2bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  323: TEK: ced591e4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  324: TEK: d01462d3XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:30:00 UTC (2688480, 117), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  325: TEK: d03bc257XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  326: TEK: d0427fc0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  327: TEK: d33c3cccXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  328: TEK: d4e333dcXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  329: TEK: d502279aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  330: TEK: d531d46eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  331: TEK: d68ba3b6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  332: TEK: d7da05d6XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  333: TEK: d93230faXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-04 00:00:00 UTC - 2021-02-05 00:00:00 UTC (2687328, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  334: TEK: d9a3cc3bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  335: TEK: dab1e1faXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  336: TEK: db30c7b9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:20:00 UTC (2688480, 116), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  337: TEK: dbf74181XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  338: TEK: dc609062XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  339: TEK: dcd5a85cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  340: TEK: ddc5a217XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  341: TEK: de2fdd2eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  342: TEK: df2fdeecXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  343: TEK: df35629dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  344: TEK: df41385bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  345: TEK: dfceb053XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  346: TEK: e0563336XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  347: TEK: e4329f77XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  348: TEK: e45403c7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  349: TEK: e4e8321eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  350: TEK: e5b661bcXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  351: TEK: e80c45ddXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  352: TEK: e81bebf7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  353: TEK: e84ee2a5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  354: TEK: e980412fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  355: TEK: e9c0c26cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  356: TEK: ea1d5f4dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  357: TEK: eaf66e36XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  358: TEK: ed41b3ecXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  359: TEK: ee176580XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  360: TEK: ee70c050XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  361: TEK: ef7cca49XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-03 00:00:00 UTC - 2021-02-03 05:50:00 UTC (2687184, 35), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  362: TEK: f019d887XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  363: TEK: f0474722XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  364: TEK: f0edc427XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  365: TEK: f1f6df19XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  366: TEK: f2f4fb01XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:50:00 UTC (2688480, 119), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  367: TEK: f30c023cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-31 00:00:00 UTC - 2021-02-01 00:00:00 UTC (2686752, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  368: TEK: f36dcf3fXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  369: TEK: f3869a60XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-03 00:00:00 UTC - 2021-02-04 00:00:00 UTC (2687184, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  370: TEK: f437c517XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  371: TEK: f51ac751XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-29 00:00:00 UTC - 2021-01-30 00:00:00 UTC (2686464, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  372: TEK: f583b89cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  373: TEK: f5d32fdeXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  374: TEK: f64d32e7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  375: TEK: f664262dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  376: TEK: f682a465XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  377: TEK: f70dfe7eXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  378: TEK: f7d8586aXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  379: TEK: f7dce4f0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-02-02 00:00:00 UTC - 2021-02-03 00:00:00 UTC (2687040, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+  380: TEK: f858df34XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-01 00:00:00 UTC - 2021-02-02 00:00:00 UTC (2686896, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  381: TEK: f970dfdbXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  382: TEK: f9819b19XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-02-10 00:00:00 UTC - 2021-02-11 00:00:00 UTC (2688192, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+  383: TEK: faba6f29XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-12 00:00:00 UTC - 2021-02-12 19:40:00 UTC (2688480, 118), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  384: TEK: fb95a682XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-02-08 00:00:00 UTC - 2021-02-09 00:00:00 UTC (2687904, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+  385: TEK: fbd7dc0cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-30 00:00:00 UTC - 2021-01-30 10:00:00 UTC (2686608, 60), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  386: TEK: fc28c23cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-02-09 00:00:00 UTC - 2021-02-10 00:00:00 UTC (2688048, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+  387: TEK: fd0f5021XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  388: TEK: fd773dafXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-06 00:00:00 UTC - 2021-02-07 00:00:00 UTC (2687616, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  389: TEK: fdba2bd9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-02-01 00:00:00 UTC - 2021-02-01 09:20:00 UTC (2686896, 56), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+  390: TEK: fe1334adXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-02-11 00:00:00 UTC - 2021-02-12 00:00:00 UTC (2688336, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+  391: TEK: ff0824ecXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-02-07 00:00:00 UTC - 2021-02-08 00:00:00 UTC (2687760, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+  392: TEK: ff4a016cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 3, Validity: 2021-02-05 00:00:00 UTC - 2021-02-06 00:00:00 UTC (2687472, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 1
+  393: TEK: ff9b775dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 5, Validity: 2021-01-31 00:00:00 UTC - 2021-01-31 10:30:00 UTC (2686752, 63), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 1
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 393 keys (393 without padding)
+Number of keys per TRL:
+Date:           1    2    3    4    5    6    7    8   Sum:
+2021-02-12:     3    1    5    3   41    7    0    4    64
+2021-02-11:     0    2    1    3    3   13    0   14    36
+2021-02-10:     0    1    4    0    2    1   11    9    28
+2021-02-09:     1    3    1    0    2    1   14    6    28
+2021-02-08:     4    0    0    0    2    2   14    3    25
+2021-02-07:     4    0    0    1    1   13    3    2    24
+2021-02-06:     4    1    0   12    1    3    0    3    24
+2021-02-05:     5    4    8    1    2    0    0    3    23
+2021-02-04:     9    8    0    1    1    0    2    1    22
+2021-02-03:    17    0    1    0    2    2    1    0    23
+2021-02-02:    16    1    0    2    1    1    0    0    21
+2021-02-01:    15    3    0    1    3    0    0    0    22
+2021-01-31:    17    2    0    0    2    0    0    0    21
+2021-01-30:    17    0    1    0    4    0    0    0    22
+2021-01-29:     9    0    0    0    1    0    0    0    10
+Total:        121   26   21   24   68   43   45   45   393
+
+Pre-V1.5 user count:  43
+Post-V1.5 user count: 31
