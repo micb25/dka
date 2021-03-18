@@ -6,6 +6,8 @@ _[English version](README.en.md)_
 
 Statistische Analyse der täglichen Diagnoseschlüssel der offiziellen deutschen COVID-19 Tracing-App ([Corona-Warn-App](https://github.com/corona-warn-app)). Zur Auswertung werden die täglich vom Corona-Warn-App-Server verteilten Diagnoseschlüssel-Pakete mit dem [diagnosis-keys](https://github.com/mh-/diagnosis-keys)-Toolset von [mh-](https://github.com/mh-/) analysiert. Aufgrund der dezentralen Architektur der Corona-Warn-App können die analysierten Daten nur [geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md) werden. Daher sind alle Angaben ohne Gewähr. Die Diagramme in diesem Repository sind lizensiert unter [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/de/). Mehr Informationen zur COVID-19 Tracing App für Deutschland unter [coronawarn.app](https://www.coronawarn.app).
 
+**Hinweis:** Seit Februar 2021 werden täglich in der App genaue Kennzahlen veröffentlicht, die diese Seite verwendet und seitdem die Schätzung überflüssig macht.
+
 **Link zur Seite mit Diagrammen: [https://micb25.github.io/dka/](https://micb25.github.io/dka/)**
 
 Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))

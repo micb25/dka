@@ -6,6 +6,8 @@ _[Deutsche Fassung](README.md)_
 
 Statistical analysis of the daily diagnosis keys of the official German COVID-19 tracing app ([Corona-Warn-App](https://github.com/corona-warn-app)). The daily diagnosis key packages, which are distributed by the CWA server, are being analyzed with the [diagnosis-keys](https://github.com/mh-/diagnosis-keys) toolset by [mh-](https://github.com/mh-/). These data can only be [estimated](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md), due to the decentralized architecture of the tracing app. Hence, all information are without any guarantee. All diagrams in this repository are licensed under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/). See [coronawarn.app](https://www.coronawarn.app) for more information about the COVID-19 tracing app for Germany.
 
+**Note:** Since February 2021, exact statistical data are being published within the CWA, which are used by this page and make the estimation of data redundant.
+
 **Link to website with diagrams: [https://micb25.github.io/dka/](https://micb25.github.io/dka/index_en.html)**
 
 An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [https://ctt.pfstr.de/](https://ctt.pfstr.de/) ([GitHub](https://github.com/janpf/ctt))
