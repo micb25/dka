@@ -16,7 +16,7 @@ set style line  1 lc rgb '#0000FF' lt 1 lw 1 pt 7 ps 2.00
 set style line  2 lc rgb '#FF0000' lt 1 lw 1 pt 7 ps 2.00
 set style line  3 lc rgb '#00A000' lt 1 lw 1 pt 7 ps 2.00
 set style line  4 lc rgb '#000080' lt 1 lw 1 pt 7 ps 2.00
-set style line  5 lc rgb '#800000' lt 1 lw 1 pt 7 ps 2.00
+set style line  5 lc rgb '#600000' lt 1 lw 1 pt 7 ps 2.00
 set style line  6 lc rgb '#005000' lt 1 lw 1 pt 7 ps 2.00
 set style line  7 lc rgb '#ff7c00' lt 1 lw 1 pt 7 ps 2.00
 set style line  8 lc rgb '#ff5c00' lt 1 lw 1 pt 7 ps 2.00
