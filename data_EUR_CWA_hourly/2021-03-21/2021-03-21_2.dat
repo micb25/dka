@@ -1,0 +1,31 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-03-21/2021-03-21_2.zip' read.
+- Time window: 2021-03-21 02:00:00 UTC - 2021-03-21 03:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 3
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 3417a752XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-03-19 00:00:00 UTC - 2021-03-20 00:00:00 UTC (2693520, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    2: TEK: 9a9db8e0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-03-19 00:00:00 UTC - 2021-03-20 00:00:00 UTC (2693520, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    3: TEK: bfbeb5e9XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-03-19 00:00:00 UTC - 2021-03-20 00:00:00 UTC (2693520, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 3 keys (3 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-03-19:    0   0   0   0   0   0   0   3    3
+Total:         0   0   0   0   0   0   0   3    3
+
+Pre-V1.5 user count:  0
+Post-V1.5 user count: 1
