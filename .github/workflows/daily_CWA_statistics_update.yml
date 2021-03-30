@@ -22,7 +22,7 @@ jobs:
       - name: install protobuf
         run: sudo apt-get install protobuf-compiler
 
-      - name: Install python dependencies
+      - name: install python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests pandas protobuf-compiler
@@ -33,7 +33,7 @@ jobs:
       - name: commit files
         run: |
           git config --local user.name  ${{ github.actor }}
-          git add data_CWA/stats/*.zip data_CWA/stats/cwa_stats_data.csv
+          git add data_CWA/stats/*.zip data_CWA/cwa_stats_data.csv
           git commit -m "daily CWA statistics update"
 
       - name: push changes
