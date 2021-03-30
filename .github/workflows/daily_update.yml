@@ -2,10 +2,12 @@ name: daily update
 
 on:
   push:
-    branches:
-      - master
-  schedule:
-    - cron: "15 0 * * *"
+    branches-ignore:
+        - '**'
+    #branches:
+    #  - master
+  #schedule:
+  #  - cron: "15 0 * * *"
 
 jobs:
   update_page:
