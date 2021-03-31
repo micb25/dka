@@ -21,9 +21,9 @@ downloads                                  | test results
 ![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_empty.png)
 
 ### Positively tested people sharing their diagnosis keys ([estimates](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-per day                                    | per week
+per day                                    | last 6 weeks
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_en/plot_num_users.png)           | ![](plots_en/plot_num_users_per_week.png)
+![](plots_en/plot_num_users.png)           | ![](plots_en/plot_num_users_last_6_weeks.png)
 **per day (7-day average)**                | **sum**
 ![](plots_en/plot_num_users_7d.png)        | ![](plots_en/plot_sum_users.png)
 

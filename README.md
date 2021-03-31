@@ -21,9 +21,9 @@ Downloads                                  | Testergebnisse
 ![](plots_de/plot_teleTANs.png)            | ![](plots_de/plot_empty.png)
 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
-Täglich                                    | Wöchentlich
+Täglich                                    | letzte 6 Wochen
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_num_users.png)           | ![](plots_de/plot_num_users_per_week.png)
+![](plots_de/plot_num_users.png)           | ![](plots_de/plot_num_users_last_6_weeks.png)
 **Täglich (7-Tage-Mittelwert)**            | **Summe**   
 ![](plots_de/plot_num_users_7d.png)        | ![](plots_de/plot_sum_users.png)
 
