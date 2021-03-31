@@ -16,7 +16,6 @@ cd scripts
 # ./CWA_TRL_daily_dist.py > /dev/null
 ./CWA_TRL_multiplier.py > /dev/null
 ./CWA_app_config.py > /dev/null
-./RKI_PDF_statistics.py > /dev/null
 cd ..
 
 # update plots
