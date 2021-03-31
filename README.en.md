@@ -35,10 +35,8 @@ ratio                                      | ratio (7-day average)
 ![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_empty.png)
 
 ### Correlation with German COVID-19 data of the [Johns Hopkins University](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
-ratio                                      | ratio (7-day average)
+reported new infections                    |    
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_en/plot_jhu_cwa_cases.png)       | ![](plots_en/plot_jhu_cwa_cases_7d.png)
-**reported new infections**                |    
 ![](plots_en/plot_jhu_cases.png)           | ![](plots_en/plot_empty.png)
 
 ### Shared legitimate diagnosis keys of positively tested people ([estimates](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
