@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# update stats
-cd data_CWA/stats_scripts/
-./cwa_parse_stats.py > /dev/null
-cd ../../
-
 # update data
 cd scripts 
 ./RKI_case_numbers.py > /dev/null
@@ -13,9 +8,7 @@ cd scripts
 ./CWA_TEKs_EUR_download_and_process_hourly.py > /dev/null
 ./CWA_RKI_users.py > /dev/null
 ./CWA_JHU_users.py > /dev/null
-# ./CWA_TRL_daily_dist.py > /dev/null
 ./CWA_TRL_multiplier.py > /dev/null
-./CWA_app_config.py > /dev/null
 cd ..
 
 # update plots
