@@ -31,8 +31,8 @@ per day                                    | last 6 weeks
 ratio                                      | ratio (7-day average)
 :-----------------------------------------:|:-----------------------------------------:
 ![](plots_en/plot_rki_cwa_cases.png)       | ![](plots_en/plot_rki_cwa_cases_7d.png)
-**ratio (per week)**                       | **reported new infections**
-![](plots_en/plot_rki_cwa_per_week.png)    | ![](plots_en/plot_rki_cases.png)
+**reported new infections**                |  
+![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_empty.png)
 
 ### Correlation with German COVID-19 data of the [Johns Hopkins University](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) (JHU)
 reported new infections                    |    
