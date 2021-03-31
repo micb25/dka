@@ -14,9 +14,11 @@ Alternatives Dashboard von [janpf](https://github.com/janpf): [https://ctt.pfstr
 
 ## Diagramme 
 ### Verwendung der Corona-Warn-App ([RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html))
-Downloads                                  | ausgestellte teleTANs (veraltet)
+Downloads                                  | Testergebnisse
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_teleTANs.png) 
+![](plots_de/plot_cwa_downloads.png)       | ![](plots_de/plot_cwa_tests.png) 
+**ausgestellte teleTANs (veraltet)**       |  
+![](plots_de/plot_teleTANs.png)            | ![](plots_de/plot_empty.png)
 
 ### Positiv getestete Personen, die Diagnoseschlüssel teilten ([geschätzt](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
 Täglich                                    | Wöchentlich

@@ -14,9 +14,11 @@ An alternative dashboard of [janpf](https://github.com/janpf) can be found at: [
 
 ## Diagrams 
 ### Usage of the Corona-Warn-App ([RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/WarnApp/Warn_App.html))
-downloads                                  | issued teleTANs (outdated)
+downloads                                  | test results
 :-----------------------------------------:|:-----------------------------------------:
-![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_teleTANs.png) 
+![](plots_en/plot_cwa_downloads.png)       | ![](plots_en/plot_cwa_tests.png) 
+**issued teleTANs (outdated)**             |    
+![](plots_en/plot_rki_cases.png)           | ![](plots_en/plot_empty.png)
 
 ### Positively tested people sharing their diagnosis keys ([estimates](https://github.com/mh-/diagnosis-keys/blob/master/doc/algorithm.md))
 per day                                    | per week
