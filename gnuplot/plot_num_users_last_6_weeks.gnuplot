@@ -38,7 +38,7 @@ set label 3 at graph 0.50, 0.85 "{/*0.75 (gemeldete Statistiken; " . update_str 
 plot  \
   "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 2 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("{/*1.00 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.55, 0.45 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("{/*1.00 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.85, 0.45 tc ls 10 notitle
 
 ##################################### English
 
@@ -55,4 +55,4 @@ set label 3 at graph 0.50, 0.85 "{/*0.75 (reported statistics; " . update_str . 
 plot  \
   "<awk -F, '{if ( NR > 1 ) print $1, $2}' ../data_CWA/cwa_stats_data.csv" using 1:2 with boxes ls 2 notitle, \
   \
-  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("{/*1.00 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.55, 0.45 tc ls 10 notitle
+  "<awk -F, 'BEGIN{a=0;b=0;c=0}{if (NR>1) {a=$1;c=b;b=$2; print a, b, b-c}}' ../data_CWA/cwa_stats_data.csv" using 1:2:(sprintf("{/*1.00 %i}", $2)) with labels font ",9" rotate by 90 point ls 2 ps 0.0 center offset char -0.85, 0.45 tc ls 10 notitle
