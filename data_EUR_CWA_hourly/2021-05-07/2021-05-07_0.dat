@@ -1,0 +1,53 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-05-07/2021-05-07_0.zip' read.
+- Time window: 2021-05-07 00:00:00 UTC - 2021-05-07 01:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 15
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 24be20e0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-05 00:00:00 UTC - 2021-05-06 00:00:00 UTC (2700288, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    2: TEK: 2d038bf8XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-05-02 00:00:00 UTC - 2021-05-03 00:00:00 UTC (2699856, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+    3: TEK: 33ed755cXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-04-25 00:00:00 UTC - 2021-04-26 00:00:00 UTC (2698848, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    4: TEK: 38c51392XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 2, Validity: 2021-04-28 00:00:00 UTC - 2021-04-29 00:00:00 UTC (2699280, 144), Report Type: RECURSIVE, Days since onset of symptoms: 2
+    5: TEK: 41cf2ef0XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-04-26 00:00:00 UTC - 2021-04-27 00:00:00 UTC (2698992, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    6: TEK: 4cd3dcceXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 1, Validity: 2021-04-27 00:00:00 UTC - 2021-04-28 00:00:00 UTC (2699136, 144), Report Type: RECURSIVE, Days since onset of symptoms: 1
+    7: TEK: 56d10486XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-02 00:00:00 UTC - 2021-05-03 00:00:00 UTC (2699856, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    8: TEK: 5d75c6c7XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-04 00:00:00 UTC - 2021-05-05 00:00:00 UTC (2700144, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    9: TEK: 65995958XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-04 00:00:00 UTC - 2021-05-05 00:00:00 UTC (2700144, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   10: TEK: 78ca9283XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-05-01 00:00:00 UTC - 2021-05-02 00:00:00 UTC (2699712, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+   11: TEK: 8bab3825XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-04-29 00:00:00 UTC - 2021-04-30 00:00:00 UTC (2699424, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+   12: TEK: a67646b5XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-03 00:00:00 UTC - 2021-05-04 00:00:00 UTC (2700000, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   13: TEK: abb69cc4XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-03 00:00:00 UTC - 2021-05-04 00:00:00 UTC (2700000, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+   14: TEK: e67f3cdaXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-04-30 00:00:00 UTC - 2021-05-01 00:00:00 UTC (2699568, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+   15: TEK: e9131529XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-05-05 00:00:00 UTC - 2021-05-06 00:00:00 UTC (2700288, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 15 keys (15 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-05-05:    0   0   0   0   0   0   0   2    2
+2021-05-04:    0   0   0   0   0   0   0   2    2
+2021-05-03:    0   0   0   0   0   0   0   2    2
+2021-05-02:    0   0   0   0   0   0   1   1    2
+2021-05-01:    0   0   0   0   0   0   1   0    1
+2021-04-30:    0   0   0   0   0   1   0   0    1
+2021-04-29:    0   0   0   1   0   0   0   0    1
+2021-04-28:    0   1   0   0   0   0   0   0    1
+2021-04-27:    1   0   0   0   0   0   0   0    1
+2021-04-26:    1   0   0   0   0   0   0   0    1
+2021-04-25:    1   0   0   0   0   0   0   0    1
+Total:         3   1   0   1   0   1   2   7   15
+
+Pre-V1.5 user count:  1
+Post-V1.5 user count: 2
