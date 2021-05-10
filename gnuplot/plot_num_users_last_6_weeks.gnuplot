@@ -6,7 +6,7 @@ set mxtics 7
 set output '../plots_de/plot_num_users_last_6_weeks.png'
 
 # stats for x
-stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
+stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/cwa_stats_data.csv" using 1 nooutput
 set xrange [ STATS_max - 42.75 * 86400 : STATS_max + 0.75 * 86400 ]
 
 # x-axis setup

@@ -4,7 +4,10 @@ set output '../plots_de/plot_num_users.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
+ymin = STATS_min - 0.75 * 86400
+stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/cwa_stats_data.csv" using 1 nooutput
+ymax = STATS_max + 0.75 * 86400
+set xrange [ ymin  : ymax ]
 
 # x-axis setup
 unset xlabel
