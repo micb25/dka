@@ -1,0 +1,37 @@
+Exposure Notification Diagnosis Key Parser / Counter
+This script counts published Diagnosis Keys.
+
+File '/home/michael/coding/dka/scripts/../data_EUR_CWA_hourly/2021-07-12/2021-07-12_4.zip' read.
+- Time window: 2021-07-12 04:00:00 UTC - 2021-07-12 05:00:00 UTC
+- Region: EUR
+- Batch: 1 of 1
+- # of keys in batch: 5
+- Signature Info:
+verification_key_version: "v1"
+verification_key_id: "262"
+signature_algorithm: "1.2.840.10045.4.3.2"
+
+Diagnosis Keys:
+    1: TEK: 17572333XXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 4, Validity: 2021-07-07 00:00:00 UTC - 2021-07-08 00:00:00 UTC (2709360, 144), Report Type: SELF_REPORT, Days since onset of symptoms: 2
+    2: TEK: 1993d67dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-07-10 00:00:00 UTC - 2021-07-11 00:00:00 UTC (2709792, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+    3: TEK: 4913e4ddXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 6, Validity: 2021-07-08 00:00:00 UTC - 2021-07-09 00:00:00 UTC (2709504, 144), Report Type: CONFIRMED_CLINICAL_DIAGNOSIS, Days since onset of symptoms: 2
+    4: TEK: 5867614bXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 7, Validity: 2021-07-09 00:00:00 UTC - 2021-07-10 00:00:00 UTC (2709648, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 1
+    5: TEK: e117fa7dXXXXXXXXXXXXXXXXXXXXXXXX, Transmission Risk Level: 8, Validity: 2021-07-11 00:00:00 UTC - 2021-07-12 00:00:00 UTC (2709936, 144), Report Type: CONFIRMED_TEST, Days since onset of symptoms: 2
+
+Revised Diagnosis Keys:
+(none)
+
+
+Parsing the Diagnosis Key list...
+Length: 5 keys (5 without padding)
+Number of keys per TRL:
+Date:          1   2   3   4   5   6   7   8   Sum:
+2021-07-11:    0   0   0   0   0   0   0   1    1
+2021-07-10:    0   0   0   0   0   0   0   1    1
+2021-07-09:    0   0   0   0   0   0   1   0    1
+2021-07-08:    0   0   0   0   0   1   0   0    1
+2021-07-07:    0   0   0   1   0   0   0   0    1
+Total:         0   0   0   1   0   1   1   2    5
+
+Pre-V1.5 user count:  1
+Post-V1.5 user count: 1
