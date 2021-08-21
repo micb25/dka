@@ -4,9 +4,9 @@ set output '../plots_de/plot_cwa_tests.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_RKI/cwa_statistics.csv" using 1 nooutput
-xmin = STATS_min - 0.5 * 86400
+xmin = STATS_min
 stats "<awk -F, '{if ( NR > 1 ) print $2}' ../data_RKI/cwa_statistics_tests.csv" using 1 nooutput
-xmax = STATS_max + 0.75 * 86400
+xmax = STATS_max
 set xrange [ xmin : xmax ]
 set yrange [ 0 : 7 < * < 100 ]
 
@@ -22,7 +22,7 @@ unset ylabel
 # key
 set key at graph 0.33, 0.20 spacing 1.2 
 
-set offsets 0.00, graph 0.02, graph 0.25, 0.00
+set offsets graph 0.02, graph 0.02, graph 0.25, 0.00
 
 # date
 date_cmd = sprintf("%s", "`awk -F, '{print "@"($2+7200)}' ../data_RKI/cwa_statistics_tests.csv | tail -n 1 | xargs date +"%d.%m.%Y" -d`")
