@@ -4,7 +4,12 @@ set output '../plots_de/plot_rki_cwa_cases.png'
 
 # stats for x
 stats "<awk -F, '{if ( NR > 1 ) print $1}' ../data_CWA/diagnosis_keys_statistics.csv" using 1 nooutput
-set xrange [ STATS_min - 0.75 * 86400 : STATS_max + 0.75 * 86400 ]
+x_min = STATS_min - 0.75 * 86400 
+
+stats "<awk -F, '{if ((NR>1)&&($1>=1611964800)) {print $1,100*$2/$3}}' ../data_CWA/cwa_stats_data.csv" using 1 nooutput
+x_max = STATS_max + 0.75 * 86400
+
+set xrange [ x_min : x_max ]
 
 # x-axis setup
 unset xlabel
