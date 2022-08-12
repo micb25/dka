@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.name  ${{ github.actor }}
           git add data_CWA/stats/*.zip data_CWA/cwa_stats_data.csv
-          git commit -m "daily CWA statistics update"
+          git diff-index --quiet HEAD || git commit -m "daily CWA statistics update"
 
       - name: push changes
         uses: ad-m/github-push-action@master

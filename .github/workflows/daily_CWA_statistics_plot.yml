@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --local user.name  ${{ github.actor }}
           git add plots_de/*.png plots_en/*.png
-          git commit -m "daily CWA statistics plots update"
+          git diff-index --quiet HEAD || git commit -m "daily CWA statistics plots update"
 
       - name: push changes
         uses: ad-m/github-push-action@master

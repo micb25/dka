@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.name  ${{ github.actor }}
           git add data_CWA/app_config/*.bin data_CWA/app_config/*.sig
-          git commit -m "daily CWA config update"
+          git diff-index --quiet HEAD || git commit -m "daily CWA config update"
 
       - name: push changes
         uses: ad-m/github-push-action@master

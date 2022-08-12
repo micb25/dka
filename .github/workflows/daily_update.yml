@@ -56,7 +56,7 @@ jobs:
           git config --local user.email "boehme.mic@gmail.com"
           git config --local user.name "micb25"
           git add plot*png data_RKI/*.csv data_CWA/*.json data_CWA/*.csv data_CWA/*.dat
-          git commit -m "daily update (automatic)" -a
+          git diff-index --quiet HEAD || git commit -m "daily update (automatic)" -a
         
       - name: push changes
         uses: ad-m/github-push-action@master
